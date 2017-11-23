@@ -1,0 +1,373 @@
+<h1>Структуры данных. Доступ к данным.</h1>
+
+<pre>
+    var house = {
+        godPostroyki: 1964,
+        materialSten: 'кирпич',
+        colPodezdov: 4,
+        colKvartirNaEtaze: 4,
+        kvartiry: [
+            {
+                nomerKvartiri: 20,
+                ktoZivet: ['Марина', 'Егор', 'Олег'],
+                dolgZaKomunalku: {
+                    valuta: 'гривна',
+                    summa: 12000
+                },
+                predmetiVnutri: [
+                    {
+                        imyaPredmeta: 'холодильник',
+                        zvet: 'зеленый',
+                        visota: {
+                            znachenie: 2.3,
+                            edinizaIzmereniya: 'метры'
+                        },
+                        shirina: {
+                            znachenie: 0.7,
+                            edinizaIzmereniya: 'метры'
+                        }
+                    },
+                    {
+                        imyaPredmeta: 'телевизор',
+                        zvet: 'коричневый',
+                        kolichestvoKanalov: 90,
+                        visota: {
+                            znachenie: 1,
+                            edinizaIzmereniya: 'метры'
+                        },
+                        shirina: {
+                            znachenie: 1.5,
+                            edinizaIzmereniya: 'метры'
+                        },
+                        vkluchen: false,
+                        vkluchit: function() {
+                            this.vkluchen = true;
+                            return this;
+                        },
+                        vikluchit: function() {
+                            this.vkluchen = false;
+                            return this;
+                        },
+                        poluchitTekushuuProgrammu: function() {
+                            if (this.vkluchen) {
+                                return 'Окна с Дмитрием Нагиевым';
+                            } else {
+                                return 'Телевизор выключен!';
+                            }
+                        }
+                    },
+                    {
+                        imyaPredmeta: 'пылесос',
+                        zvet: 'белый',
+                        moshnost: {
+                            znachenie: 230,
+                            edinizaIzmereniya: 'ватт'
+                        },
+                        shum: {
+                            znachenie: 4,
+                            edinizaIzmereniya: 'децибелы'
+                        }
+                    },
+                    {
+                        imyaPredmeta: 'сервант',
+                        otkritiy: false,
+                        zvet: 'белый',
+                        otkrit: function() {
+                            this.otkritiy = true;
+                            return this;
+                        },
+                        zakrit: function() {
+                            this.otkritiy = false;
+                            return this;
+                        },
+                        poluchitSoderzhimoe: function() {
+                            if (this.otkritiy) {
+                                return [
+                                    {
+                                        name: 'носок',
+                                        color: 'красный'
+                                    },
+                                    {
+                                        name: 'платок',
+                                        color: 'белый'
+                                    },
+                                    {
+                                        name: 'револьвер',
+                                        color: 'черный'
+                                    }
+                                ];
+                            } else {
+                                return 'Серван закрыт!';
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                nomerKvartiri: 25,
+                ktoZivet: ['Саша', 'Лида', 'Юля'],
+                dolgZaKomunalku: {
+                    valuta: 'гривна',
+                    summa: 235.23
+                },
+                predmetiVnutri: [
+                    {
+                        imyaPredmeta: 'диван',
+                        zvet: 'желтый',
+                        visota: {
+                            znachenie: 1,
+                            edinizaIzmereniya: 'метры'
+                        },
+                        shirina: {
+                            znachenie: 2,
+                            edinizaIzmereniya: 'метры'
+                        }
+                    },
+                    {
+                        imyaPredmeta: 'телевизор',
+                        zvet: 'черный',
+                        kolichestvoKanalov: 122,
+                        visota: {
+                            znachenie: 1,
+                            edinizaIzmereniya: 'метры'
+                        },
+                        shirina: {
+                            znachenie: 1.5,
+                            edinizaIzmereniya: 'метры'
+                        }
+                    },
+                    {
+                        imyaPredmeta: 'кот',
+                        zvet: 'белый',
+                        name: 'Пушок',
+                        pol: 'мужской',
+                        vozrast: {
+                            znachenie: 10,
+                            edinizaIzmereniya: 'лет'
+                        },
+                        lubimoeBludo: 'рыба'
+                    },
+                    {
+                        imyaPredmeta: 'шкаф',
+                        otkritiy: false,
+                        zvet: 'коричневый',
+                        otkrit: function() {
+                            this.otkritiy = true;
+                            return this;
+                        },
+                        zakrit: function() {
+                            this.otkritiy = false;
+                            return this;
+                        },
+                        poluchitSoderzhimoe: function() {
+                            if (this.otkritiy) {
+                                return [
+                                    {
+                                        name: 'платье',
+                                        color: 'белый'
+                                    },
+                                    {
+                                        name: 'штаны',
+                                        color: 'черный'
+                                    },
+                                    {
+                                        name: 'перчатки',
+                                        color: 'белый'
+                                    }
+                                ];
+                            } else {
+                                return 'Шкаф закрыт!';
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+</pre>
+
+<script>
+    var house = {
+        godPostroyki: 1964,
+        materialSten: 'кирпич',
+        colPodezdov: 4,
+        colKvartirNaEtaze: 4,
+        kvartiry: [
+            {
+                nomerKvartiri: 20,
+                ktoZivet: ['Марина', 'Егор', 'Олег'],
+                dolgZaKomunalku: {
+                    valuta: 'гривна',
+                    summa: 12000
+                },
+                predmetiVnutri: [
+                    {
+                        imyaPredmeta: 'холодильник',
+                        zvet: 'зеленый',
+                        visota: {
+                            znachenie: 2.3,
+                            edinizaIzmereniya: 'метры'
+                        },
+                        shirina: {
+                            znachenie: 0.7,
+                            edinizaIzmereniya: 'метры'
+                        }
+                    },
+                    {
+                        imyaPredmeta: 'телевизор',
+                        zvet: 'коричневый',
+                        kolichestvoKanalov: 90,
+                        visota: {
+                            znachenie: 1,
+                            edinizaIzmereniya: 'метры'
+                        },
+                        shirina: {
+                            znachenie: 1.5,
+                            edinizaIzmereniya: 'метры'
+                        },
+                        vkluchen: false,
+                        vkluchit: function() {
+                            this.vkluchen = true;
+                            return this;
+                        },
+                        vikluchit: function() {
+                            this.vkluchen = false;
+                            return this;
+                        },
+                        poluchitTekushuuProgrammu: function() {
+                            if (this.vkluchen) {
+                                return 'Окна с Дмитрием Нагиевым';
+                            } else {
+                                return 'Телевизор выключен!';
+                            }
+                        }
+                    },
+                    {
+                        imyaPredmeta: 'пылесос',
+                        zvet: 'белый',
+                        moshnost: {
+                            znachenie: 230,
+                            edinizaIzmereniya: 'ватт'
+                        },
+                        shum: {
+                            znachenie: 4,
+                            edinizaIzmereniya: 'децибелы'
+                        }
+                    },
+                    {
+                        imyaPredmeta: 'сервант',
+                        otkritiy: false,
+                        zvet: 'белый',
+                        otkrit: function() {
+                            this.otkritiy = true;
+                            return this;
+                        },
+                        zakrit: function() {
+                            this.otkritiy = false;
+                            return this;
+                        },
+                        poluchitSoderzhimoe: function() {
+                            if (this.otkritiy) {
+                                return [
+                                    {
+                                        name: 'носок',
+                                        color: 'красный'
+                                    },
+                                    {
+                                        name: 'платок',
+                                        color: 'белый'
+                                    },
+                                    {
+                                        name: 'револьвер',
+                                        color: 'черный'
+                                    }
+                                ];
+                            } else {
+                                return 'Серван закрыт!';
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                nomerKvartiri: 25,
+                ktoZivet: ['Саша', 'Лида', 'Юля'],
+                dolgZaKomunalku: {
+                    valuta: 'гривна',
+                    summa: 235.23
+                },
+                predmetiVnutri: [
+                    {
+                        imyaPredmeta: 'диван',
+                        zvet: 'желтый',
+                        visota: {
+                            znachenie: 1,
+                            edinizaIzmereniya: 'метры'
+                        },
+                        shirina: {
+                            znachenie: 2,
+                            edinizaIzmereniya: 'метры'
+                        }
+                    },
+                    {
+                        imyaPredmeta: 'телевизор',
+                        zvet: 'черный',
+                        kolichestvoKanalov: 122,
+                        visota: {
+                            znachenie: 1,
+                            edinizaIzmereniya: 'метры'
+                        },
+                        shirina: {
+                            znachenie: 1.5,
+                            edinizaIzmereniya: 'метры'
+                        }
+                    },
+                    {
+                        imyaPredmeta: 'кот',
+                        zvet: 'белый',
+                        name: 'Пушок',
+                        pol: 'мужской',
+                        vozrast: {
+                            znachenie: 10,
+                            edinizaIzmereniya: 'лет'
+                        },
+                        lubimoeBludo: 'рыба'
+                    },
+                    {
+                        imyaPredmeta: 'шкаф',
+                        otkritiy: false,
+                        zvet: 'коричневый',
+                        otkrit: function() {
+                            this.otkritiy = true;
+                            return this;
+                        },
+                        zakrit: function() {
+                            this.otkritiy = false;
+                            return this;
+                        },
+                        poluchitSoderzhimoe: function() {
+                            if (this.otkritiy) {
+                                return [
+                                    {
+                                        name: 'платье',
+                                        color: 'белый'
+                                    },
+                                    {
+                                        name: 'штаны',
+                                        color: 'черный'
+                                    },
+                                    {
+                                        name: 'перчатки',
+                                        color: 'белый'
+                                    }
+                                ];
+                            } else {
+                                return 'Шкаф закрыт!';
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+</script>
