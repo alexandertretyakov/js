@@ -2,88 +2,91 @@
 //------------------------    1
 
 var bloknot = {
-    visota:'30cm',
-    shirina:'5cm',
-    tolshina:'5cm',
-    ves:'150gr'
+    visota: '30cm',
+    shirina: '5cm',
+    tolshina: '5cm',
+    ves: '150gr'
 };
 
 var provod = {
-    dlina:'15m',
-    sechenie:'3kv',
-    tip:'mnogogilniy',
-    ves:'1kg'
+    dlina: '15m',
+    sechenie: '3kv',
+    tip: 'mnogogilniy',
+    ves: '1kg'
 };
 
 var tramvay = {
-    dlina:'15m',
-    shirina:'4m',
-    tip:'KTM-5',
-    ves:'18tonn'
+    dlina: '15m',
+    shirina: '4m',
+    tip: 'KTM-5',
+    ves: '18tonn'
 };
 
 var televizor = {
-    diagonal:'42dyima',
-    tip:'GK',
-    marka:'KIVI',
-    ves:'2kg'
+    diagonal: '42dyima',
+    tip: 'GK',
+    marka: 'KIVI',
+    ves: '2kg'
 };
 
 var shar = {
-    material:'stal',
-    diametr:'1metr',
-    izdelie:'globus',
-    ves:'2kg'
+    material: 'stal',
+    diametr: '1metr',
+    izdelie: 'globus',
+    ves: '2kg'
 };
 
 //------------------------    2
 
-var one = function (a, b) {
+var one = function(a, b) {
     var c;
+
     if (a > b) {
         c = a - b;
-    }
-    else {
+    } else {
         c = a + b;
     }
+
     return c;
 };
 
-var two = function (d, e) {
+var two = function(d, e) {
     var g;
+
     if (d !== e) {
         g = d * e;
-    }
-    else {
+    } else {
         g = d - e;
     }
+
     return g;
 };
 
-var tree = function (h, f) {
+var tree = function(h, f) {
     var i;
+
     if (h < f) {
         i = 1;
-    }
-    else {
+    } else {
         i = 0;
     }
+
     while (i < 3) {
-        alert (Privet);
+        alert (Privet); // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Error
         i = i + 1;
     }
 };
 
-var min = function (a, b) {
-    if (a > b) {
-        return b;
+var min = function(a, b) {
+    if (a < b) {
+        return a;
     }
     else {
-        return a;
+        return b;
     }
 };
 
-var max = function (a, b) {
+var max = function(a, b) {
     if (a > b) {
         return a;
     }
@@ -118,7 +121,7 @@ var chastiDvigatelya = [
     'radiator'
 ];
 
-var  patronSostav = [
+var patronSostav = [
     'pulya',
     'gilza',
     'cokol',
@@ -126,10 +129,9 @@ var  patronSostav = [
 ];
 
 var sostavKindera = [
-    'shokolad',
-    'igrushka',
-    'plastikoviy kokon',
-    'instrukciya',
-    'obertka'
+    'шоколад',
+    'игрушка',
+    'пластиковый кокон',
+    'инстуркция',
+    'обертка'
 ];
-
