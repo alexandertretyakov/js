@@ -70,7 +70,7 @@ var tree = function (h, f) {
     }
     while (i < 3) {
         alert (Privet);
-        i++;
+        i = i + 1;
     }
 };
 
