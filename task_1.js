@@ -37,6 +37,21 @@ var shar = {
     ves: '2kg'
 };
 
+var MFU = {
+    material: 'plastik',
+    format: 'a4',
+    funkcii: {
+        knopka1: 'printer',
+        knopka2: 'skaner',
+        knopka3: 'kseroks'
+    },
+    gabariti: {
+        shirina: '50cm',
+        dlina: '30sm',
+        ves: '5kg'
+    }
+};
+
 //------------------------    2
 
 var one = function(a, b) {
@@ -53,7 +68,7 @@ var two = function() {
     }
     else {
         console.log('Идём вправо');
-        }
+    }
 };
 
 var tree = function() {
@@ -63,7 +78,8 @@ var tree = function() {
     var d;
     if (a[2] < a[1]) {
         d = b + c;
-    } else {
+    }
+    else {
         d = b * c;
     }
     return d;
@@ -72,7 +88,7 @@ var tree = function() {
 var four = function() {
     var hours = 12;
     var minutes = 30;
-    if (hours === 12 && minutes ===30) {
+    if (hours === 12 && minutes === 30) {
         alert('12 часов 30 минут');
     }
 };
@@ -81,8 +97,8 @@ var five = function() {
     var a = [33,2,45,6,71,24];
     var count = 0;
     while (count < a.length) {
-        count = count + 1;
         alert('Подтвердите вход');
+        count = count + 1;
     }
 };
 
