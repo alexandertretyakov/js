@@ -52,6 +52,36 @@ var MFU = {
     }
 };
 
+var PC = {
+    monitor: 'LG',
+    kolonki: 'Luxeon',
+    camera: 'Sven',
+    sistemniyBlok: {
+        Korpus: 'Cooler Master',
+        processor: 'AMD',
+        OZU: 'Pioneer',
+        VideoKarta: 'Radeon'
+    }
+};
+
+var Lampa = {
+    firma: 'Feron',
+    Yarkost: '620 Lyuminov',
+    moshnost: '7 watt',
+    strana: 'Kitay'
+};
+
+var kniga = {
+    nazvanie: 'Java Skript',
+    stranici: '1080',
+    glava: {
+        identifikator: '7.3',
+        zaglavie: 'Razregennie massivi',
+        stranica: '167',
+        primeri: '5 virageniy'
+    }
+};
+
 //------------------------    2
 
 var one = function(a, b) {
@@ -65,8 +95,7 @@ var two = function() {
     var b = -7;
     if(a < b) {
         console.log('Идём налево');
-    }
-    else {
+    } else {
         console.log('Идём вправо');
     }
 };
@@ -78,8 +107,7 @@ var tree = function() {
     var d;
     if (a[2] < a[1]) {
         d = b + c;
-    }
-    else {
+    } else {
         d = b * c;
     }
     return d;
@@ -142,6 +170,47 @@ var sostavKindera = [
     'инстуркция',
     'обертка'
 ];
+
+var massiv = [
+    1,
+    2,
+    3,
+    [
+        123,
+        'y',
+        {
+            ruchka: 'derevo',
+            rabochayaPloskost: 'rezina' //*------------name?-----------------------------------------
+        },
+        true
+    ],
+    function(){},
+    22,
+    false
+];
+
+var massiv2 = [
+    [
+        1,
+        2,
+        3,
+        [function() {},
+            'e',
+            [
+                5,
+                6,
+                7
+            ]
+        ]
+     ]
+];
+
+var karman = [
+    'telefon',
+    'klyuchi'
+];
+
+
 
 //---------------------------------------------    #3    ---------------------------------------------
 
@@ -212,3 +281,69 @@ var sostavKindera = [
  house.kvartiry[1].predmetiVnutri[3].otkrit().poluchitSoderzhimoe()[2].color;
  "белый" */
 
+var first = function(array) {
+    if (array === undefined) {
+        return undefined;
+    } else {
+        return array[0];         // возвращает первый элемент массива
+    }
+};
+
+var last = function(array) {
+    if (array === undefined) {
+        return undefined;
+    } else {
+        return array[array.length - 1]; // возвращает последний элемент массива
+    }
+};
+
+//Функция принимает массив чисел находит наименьшее из них и возвращает его
+var min = function(a) {
+    var min = a[0];
+    var i = 0;
+    while (i<a.length) {
+        if (a[i]<min) {
+            min = a[i];
+        }
+        i = i + 1;
+    }
+    return min;
+};
+
+//Функция принимает массив чисел находит наибольшее из них и возвращает его
+var max = function(a) {
+    var max = a[0];
+    var i = 0;
+    while (i<a.length) {
+        if (a[i]>max) {
+            max = a[i];
+        }
+        i = i + 1;
+    }
+    return max;
+};
+
+// Функция compact возвращает копию массива без undefined значений
+var compact = function(a) {
+    var b = [];
+    var i = 0;
+    while (i<a.length) {
+        if (a[i] !== undefined) {
+            b[b.length] = a[i];
+        }
+        i = i + 1;
+    }
+    return b;
+};
+
+//Функция contains вернет true если значение переменной b содержится в значении переменной а
+var contains = function(a, b) {
+    var i = 0;
+    while (i<a.length) {
+        if (a[i] === b) {
+            return true;
+        }
+        i = i + 1;
+    }
+    return false;
+};
