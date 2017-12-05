@@ -347,3 +347,57 @@ var contains = function(a, b) {
     }
     return false;
 };
+
+//Функция size возвращает количество элементов в массиве
+var size = function(a) {
+    return a.length;
+};
+
+//Функция isUndefined проверяет, равен ли её аргумент undefined
+var isUndefined = function(a) {
+    if(a === undefined) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+//Функция isBoolean проверяет принадлежность аргумента к логическому типу данных
+var isBoolean = function(a) {
+    if( a === true || a === false ) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+// Функция indexOf проверяет нахождение элемента в масиве и возвращает его индекс (позицию) в массиве, иначе выводит -1
+var indexOf = function(a, b) {
+    var i = 0;
+    while ( i < a.length ) {
+        if ( a[i] === b ) {
+            return i;
+        }
+        i = i + 1;
+    }
+    return -1;
+};
+
+var a = function (b) {
+    if (b === null) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+var a = function (b, c) {
+    i = 0;
+    while( i < b.length) {
+        if( b[i] === c ) {
+            return b[]
+        }
+        i = i + 1;
+    }
+
+};
