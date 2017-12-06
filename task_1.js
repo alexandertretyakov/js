@@ -383,21 +383,116 @@ var indexOf = function(a, b) {
     return -1;
 };
 
-var a = function (b) {
-    if (b === null) {
+//Функция isNull проверяет что ее аргумент не равен null
+var isNull = function (value) {
+    if (value === null) {
         return true;
     } else {
         return false;
     }
 };
 
-var a = function (b, c) {
-    i = 0;
-    while( i < b.length) {
-        if( b[i] === c ) {
-            return b[]
+//Функция without возвращает копию массива без второго входящего значения.
+var without = function(array, value) {
+    var result = [];
+    var i = 0;
+    while (i < array.length) {
+        if (array[i] !== value) {
+            result[result.length] = array[i];
         }
         i = i + 1;
     }
+    return result;
+};
 
+//Функция reverse возвращает копию массива array с элементами в обратном порядке
+var reverse = function(array) {
+    var result = [];
+    var i = array.length - 1;
+    while (i >= 0) {
+        result[result.length] = array [i];
+        i = i - 1;
+    }
+    return result;
+};
+
+//Функция concat возвращает массив содержащий элементы array1 и array2
+var concat = function(array1, array2) {
+    var result = [];
+    var i = 0;
+    while (i < array1.length) {
+        result[result.length] = array1[i];
+        i = i + 1;
+    }
+    i = 0;
+    while (i < array2.length) {
+        result[result.length] = array2[i];
+        i = i + 1;
+    }
+    return result;
+};
+
+//Функция sum принимает массив чисел и возвращает их сумму
+var sum = function(array) {
+    var i = 0;
+    var sum = 0;
+    while (i < array.length) {
+        sum = sum + array[i];
+        i = i + 1;
+    }
+    return sum;
+};
+
+//Функция multiply принимает массив чисел и возвращает их произведение
+var multiply = function(array) {
+    var i = 0;
+    var multiply = 1;
+    while (i < array.length) {
+        multiply = multiply * array[i];
+        i = i + 1;
+    }
+    return multiply;
+};
+
+//Функция push2 добавляет в конец копии массива array значение value и возвращает его
+var push2 = function (array, value) {
+    var result = [];
+    var i = 0;
+    while (i < array.length) {
+        result[result.length] = array[i];
+        i = i + 1;
+    }
+    result[result.length] = value;
+    return result;
+};
+
+//Функция push добавляет в конец массива array значение value
+var push = function (array, value) {
+    array[array.length] = value;
+};
+
+//Функция join возвращает строку состоящую из элементов массива array и сепараторов
+var join = function(array, separator) {
+    var i = 0;
+    var result = '';
+    while (i < array.length) {
+        result = result + array[i];
+        if (i < array.length - 1) {
+            result = result + separator;
+        }
+        i = i + 1;
+    }
+    return result;
+};
+
+//Функция lastIndexOf возвращает индекс value в массиве array с конца массива иначе возвращает -1
+var lastIndexOf = function(array, value) {
+    var i = array.length - 1;
+    while (i >= 0) {
+        if (array[i] === value) {
+            return i;
+        }
+        i = i - 1;
+    }
+    return -1;
 };
