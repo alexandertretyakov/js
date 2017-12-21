@@ -30,26 +30,13 @@ expectation('Тест №1.2', testImage === "http://zoo.kiev.ua/images/logo290_
 
 
 //-----------------------------------------------2.1
-var TEST = document.querySelectorAll('#ul_catalog_menu_Lk7Vbr .bx-nav-1-lvl').length;
+var testing = document.querySelectorAll('#ul_catalog_menu_Lk7Vbr .bx-nav-1-lvl').length;
 //undefined
 
-/*console.log(TEST.length)
+/*console.log(testing)
 8*/
 
-if(TEST === 8){
-    console.log('Тест на проверку пройден !');
-} else {
-    console.log('Тест на проверку не пройден !');
-}
-//Тест на проверку пройден !
-
-if(TEST === 7){
-    console.log('Тест на проверку пройден !');
-} else {
-    console.log('Тест на проверку не пройден !');
-}
-//Тест на проверку не пройден !
-
+expectation('Тест №1.1', testing  === 8);
 
 
 //-----------------------------------------------2.2
@@ -286,7 +273,7 @@ if (t1 === "Тел. +38 (044) 277-47-69") {
 var banner = document.querySelectorAll('.owl-pagination .owl-page').length;
 //undefined
 
-//console.log(banner.length)
+//console.log(banner)
 //5
 
 if (banner === 5) {
@@ -338,7 +325,7 @@ if (gorilla === 'url("/upload/iblock/442/4425345c4806c777511d15c5508a322c.jp")')
 
 
 //-----------------------------------------------6.2
-var f = document.querySelectorAll('#footer-links')[0].children[0].innerText;
+var f = document.querySelectorAll('#footer-links li a')[0].innerText;
 //undefined
 
 //f
@@ -346,19 +333,21 @@ var f = document.querySelectorAll('#footer-links')[0].children[0].innerText;
 
 if (f === "ООПАРК") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (test === "ЗООПАРК") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var f1 = document.querySelectorAll('#footer-links')[0].children[1].innerText;
+var f1 = document.querySelectorAll('#footer-links li a')[1].innerText;
 //undefined
 
 //f1
@@ -366,19 +355,21 @@ var f1 = document.querySelectorAll('#footer-links')[0].children[1].innerText;
 
 if (f1 === "ВАРИНИ") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (f1 === "ТВАРИНИ") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var f2 = document.querySelectorAll('#footer-links')[0].children[2].innerText;
+var f2 = document.querySelectorAll('#footer-links li a')[2].innerText;
 //undefined
 
 //f2
@@ -386,19 +377,21 @@ var f2 = document.querySelectorAll('#footer-links')[0].children[2].innerText;
 
 if (f2 === "КОПРОСВІТА") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (f2 === "ЕКОПРОСВІТА") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var f3 = document.querySelectorAll('#footer-links')[0].children[3].innerText;
+var f3 = document.querySelectorAll('#footer-links li a')[3].innerText;
 //undefined
 
 //f3
@@ -406,19 +399,21 @@ var f3 = document.querySelectorAll('#footer-links')[0].children[3].innerText;
 
 if (f3 === "ООКОМАНДА") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (f3 === "ЗООКОМАНДА") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var f4 = document.querySelectorAll('#footer-links')[0].children[4].innerText;
+var f4 = document.querySelectorAll('#footer-links li a')[4].innerText;
 //undefined
 
 //f4
@@ -426,19 +421,21 @@ var f4 = document.querySelectorAll('#footer-links')[0].children[4].innerText;
 
 if (f4 === "ОВИНИ") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (f4 === "НОВИНИ") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var f5 = document.querySelectorAll('#footer-links')[0].children[5].innerText;
+var f5 = document.querySelectorAll('#footer-links li a')[5].innerText;
 //undefined
 
 //f5
@@ -446,19 +443,21 @@ var f5 = document.querySelectorAll('#footer-links')[0].children[5].innerText;
 
 if (f5 === "АЛЕРЕЯ") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (f5 === "ГАЛЕРЕЯ") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var f6 = document.querySelectorAll('#footer-links')[0].children[6].innerText;
+var f6 = document.querySelectorAll('#footer-links li a')[6].innerText;
 //undefined
 
 //f6
@@ -466,19 +465,21 @@ var f6 = document.querySelectorAll('#footer-links')[0].children[6].innerText;
 
 if (f6 === "ОНТАКТИ") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (f6 === "КОНТАКТИ") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var f7 = document.querySelectorAll('#footer-links')[0].children[7].innerText;
+var f7 = document.querySelectorAll('#footer-links li a')[7].innerText;
 //undefined
 
 //f7
@@ -486,20 +487,22 @@ var f7 = document.querySelectorAll('#footer-links')[0].children[7].innerText;
 
 if (f7 === "АРТА АЙТА") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (f7 === "КАРТА САЙТА") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
 //-----------------------------------------------6.3
-var ssilka = document.querySelectorAll('#footer-links')[0].children[0].querySelectorAll('li a')[0].href;
+
 var ssilka = document.querySelectorAll('#footer-links li a')[0].href;
 //undefined
 
@@ -508,19 +511,21 @@ var ssilka = document.querySelectorAll('#footer-links li a')[0].href;
 
 if (ssilka === "ttp://zoo.kiev.ua/about/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (ssilka === "http://zoo.kiev.ua/about/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var ssilka1 = document.querySelectorAll('#footer-links')[0].children[1].querySelectorAll('li a')[0].href;
+var ssilka1 = document.querySelectorAll('#footer-links li a')[1].href;
 //undefined
 
 //ssilka1
@@ -528,19 +533,21 @@ var ssilka1 = document.querySelectorAll('#footer-links')[0].children[1].querySel
 
 if (ssilka1 === "ttp://zoo.kiev.ua/animals/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (ssilka1 === "http://zoo.kiev.ua/animals/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var ssilka2 = document.querySelectorAll('#footer-links')[0].children[2].querySelectorAll('li a')[0].href;
+var ssilka2 = document.querySelectorAll('#footer-links li a')[2].href;
 //undefined
 
 //ssilka2
@@ -548,19 +555,21 @@ var ssilka2 = document.querySelectorAll('#footer-links')[0].children[2].querySel
 
 if (ssilka2 === "ttp://zoo.kiev.ua/ekoprosvita/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (ssilka2 === "http://zoo.kiev.ua/ekoprosvita/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var ssilka3 = document.querySelectorAll('#footer-links')[0].children[3].querySelectorAll('li a')[0].href;
+var ssilka3 = document.querySelectorAll('#footer-links li a')[3].href;
 //undefined
 
 //ssilka3
@@ -568,19 +577,21 @@ var ssilka3 = document.querySelectorAll('#footer-links')[0].children[3].querySel
 
 if (ssilka3 === "ttp://zoo.kiev.ua/zookomanda/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (ssilka3 === "http://zoo.kiev.ua/zookomanda/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var ssilka4 = document.querySelectorAll('#footer-links')[0].children[4].querySelectorAll('li a')[0].href;
+var ssilka4 = document.querySelectorAll('#footer-links li a')[4].href;
 //undefined
 
 //ssilka4
@@ -588,19 +599,21 @@ var ssilka4 = document.querySelectorAll('#footer-links')[0].children[4].querySel
 
 if (ssilka4 === "ttp://zoo.kiev.ua/news/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (ssilka4 === "http://zoo.kiev.ua/news/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var ssilka5 = document.querySelectorAll('#footer-links')[0].children[5].querySelectorAll('li a')[0].href;
+var ssilka5 = document.querySelectorAll('#footer-links li a')[5].href;
 //undefined
 
 //ssilka5
@@ -608,19 +621,21 @@ var ssilka5 = document.querySelectorAll('#footer-links')[0].children[5].querySel
 
 if (ssilka5 === "ttp://zoo.kiev.ua/gallery/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (ssilka5 === "http://zoo.kiev.ua/gallery/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var ssilka6 = document.querySelectorAll('#footer-links')[0].children[6].querySelectorAll('li a')[0].href;
+var ssilka6 = document.querySelectorAll('#footer-links li a')[6].href;
 //undefined
 
 //ssilka6
@@ -628,19 +643,21 @@ var ssilka6 = document.querySelectorAll('#footer-links')[0].children[6].querySel
 
 if (ssilka6 === "ttp://zoo.kiev.ua/contacts/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (ssilka6 === "http://zoo.kiev.ua/contacts/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var ssilka7 = document.querySelectorAll('#footer-links')[0].children[7].querySelectorAll('li a')[0].href;
+var ssilka7 = document.querySelectorAll('#footer-links li a')[7].href;
 //undefined
 
 //ssilka7
@@ -648,13 +665,15 @@ var ssilka7 = document.querySelectorAll('#footer-links')[0].children[7].querySel
 
 if (ssilka7 === "ttp://zoo.kiev.ua/search/map.php") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
 if (ssilka7 === "http://zoo.kiev.ua/search/map.php") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
@@ -666,20 +685,22 @@ if (ssilka7 === "http://zoo.kiev.ua/search/map.php") {
 
 
 //-----------------------------------------------7.1
-var animal = document.querySelectorAll('.bx_catalog_tile .bx_catalog_tile_ul')[0].children;
+var animal = document.querySelectorAll('.bx_catalog_tile .bx_catalog_tile_ul li').length;
 
-//animal.length
+//animal
 //6
 
-if (animal.length === 8) {
+if (animal === 8) {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
-if (animal.length === 6) {
+if (animal === 6) {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
@@ -687,49 +708,53 @@ if (animal.length === 6) {
 
 
 //-----------------------------------------------7.2
-var Birds = document.querySelectorAll('.bx_catalog_tile .bx_catalog_tile_ul')[0].children[1].innerText;
+var birds = document.querySelectorAll('.bx_catalog_tile .bx_catalog_tile_ul li')[1].innerText;
 //undefined
 
-//Birds
+//birds
 /*"ПТАХИ
 "*/
 
-Birds.trim();
+birds.trim();
 //"ПТАХИ"
 
-if (Birds.trim() === "ТАХИ") {
+if (birds.trim() === "ТАХИ") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
-if (Birds.trim() === "ПТАХИ") {
+if (birds.trim() === "ПТАХИ") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
-var Reptiles = document.querySelectorAll('.bx_catalog_tile .bx_catalog_tile_ul')[0].children[3].innerText;
+var reptiles = document.querySelectorAll('.bx_catalog_tile .bx_catalog_tile_ul li')[3].innerText;
 //undefined
 
-//Reptiles
+//reptiles
 /*"ПЛАЗУНИ
 "*/
 
-Reptiles.trim();
+reptiles.trim();
 //"ПЛАЗУНИ"
 
-if (Reptiles.trim() === "ЛАЗУНИ") {
+if (reptiles.trim() === "ЛАЗУНИ") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
-if (Reptiles.trim() === "ПЛАЗУНИ") {
+if (reptiles.trim() === "ПЛАЗУНИ") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
@@ -737,27 +762,29 @@ if (Reptiles.trim() === "ПЛАЗУНИ") {
 
 
 //-----------------------------------------------7.3
-var BirdsLinks = document.querySelectorAll('.bx_catalog_tile .bx_catalog_tile_ul')[0].children[1].children[0].href;
+var birdsLinks = document.querySelectorAll('.bx_catalog_tile .bx_catalog_tile_ul li a')[2].href;
 //undefined
 
-//BirdsLinks
+//birdsLinks
 //"http://zoo.kiev.ua/animals/ptakhi/"
 
-if (BirdsLinks === "ttp://zoo.kiev.ua/animals/ptakhi/") {
+if (birdsLinks === "ttp://zoo.kiev.ua/animals/ptakhi/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку не пройден !
 
-if (BirdsLinks === "http://zoo.kiev.ua/animals/ptakhi/") {
+if (birdsLinks === "http://zoo.kiev.ua/animals/ptakhi/") {
     console.log('Тест на проверку выполнен успешно !');
-} else { console.log('Тест на проверку не пройден !');
+} else {
+    console.log('Тест на проверку не пройден !');
 }
 //Тест на проверку выполнен успешно !
 
 
 
 // Тест №99
-var ReptilessLinks = document.querySelectorAll('.bx_catalog_tile .bx_catalog_tile_ul')[0].children[3].children[0].href;
-//expectation('Сравниваем что a === b', ReptilessLinks === "ttp://zoo.kiev.ua/animals/plazuni/");
-expectation('Тест №99', ReptilessLinks === "http://zoo.kiev.ua/animals/plazuni/");
+var reptilessLinks = document.querySelectorAll('.bx_catalog_tile .bx_catalog_tile_ul li a')[6].href;
+//expectation('Сравниваем что a === b', reptilessLinks === "ttp://zoo.kiev.ua/animals/plazuni/");
+expectation('Тест №99', reptilessLinks === "http://zoo.kiev.ua/animals/plazuni/");

@@ -233,3 +233,55 @@ var values = function(obj) {
     }
     return result;
 };
+
+//Функция pairs возвращает список пар [свойство, значение] входящего объекта.
+var pairs = function(obj) {
+    var p;
+    var array = [];
+    for (p in obj) {
+        array[array.length] = [p, obj[p]];
+    }
+    return array;
+};
+
+//Функция has проверяет, содержит ли объект указанный ключ (свойство). Если да то возвращает true иначе false.
+var has = function(obj, prop) {
+    var p;
+    for (p in obj) {
+        if (p === prop) {
+            return true;
+        }
+    }
+    return false;
+};
+
+//Функция omit возвращает копию объекта без указаного свойства.
+var omit = function(obj, prop) {
+    var o = {};
+    var p;
+    for (p in obj) {
+        if (p !== prop) {
+            o[p] = obj[p];
+        }
+    }
+    return o;
+};
+
+//Функция isEmpty вернёт true если коллекция (объект или массив) не содержит ни одного значения иначе false.
+var isEmpty = function (list) {
+    var p;
+    for (p in list) {
+        return false;
+    }
+    return true;
+};
+
+//Функция invert возвращает копию входящего объекта где свойства - значения, а занчение - свойства.
+var invert = function(obj) {
+    var o = {};
+    var p;
+    for (p in obj) {
+        o[obj[p]] = p;
+    }
+    return o;
+};
