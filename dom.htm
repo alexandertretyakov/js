@@ -12,7 +12,7 @@
 
 <p class="z z4">4. При клике на кнопку изменить путь к картинке</p>
 <p class="t t4">Тест <img src="https://agronomu.com/media/res/1/1/4/7/6/11476.oj1cwc.300.jpg" width="100"></p>
-<button class="b b4">Изменить цвет текста</button>
+<button class="b b4">Изменить путь к картинке</button>
 
 <p class="z z5">5. При клике на кнопку изменить id элемента</p>
 <p class="t t5" id="ab">Тест</p>
@@ -60,5 +60,80 @@
 </style>
 
 <script>
-    // JavaScript код писать тут
+    var button1 = document.querySelectorAll('.b1')[0];
+    var func1 = function(event) {
+        event.target.color = '';
+        document.querySelectorAll('.t1')[0].style.color = 'red'
+    };
+    button1.addEventListener('click', func1);
+
+    var button2 = document.querySelectorAll('.b2')[0];
+    var func2 = function(event) {
+        event.target.backgroundColor = '';
+        document.querySelectorAll('.t2')[0].style.backgroundColor = 'green'
+    };
+    button2.addEventListener('click', func2);
+
+    var button3 = document.querySelectorAll('.b3')[0];
+    var func3 = function(event) {
+        event.target.href = "https://habrahabr.ru/";
+        document.querySelectorAll('.t3 a')[0].href = 'http://zoo.kiev.ua/';
+    };
+    button3.addEventListener('click', func3);
+
+    var button4 = document.querySelectorAll('.b4')[0];
+    var func4 = function(event) {
+        event.target.src = 'https://agronomu.com/media/res/1/1/4/7/6/11476.oj1cwc.300.jpg';
+        document.querySelectorAll('.t4 img')[0].src = 'https://i.pinimg.com/236x/df/f3/a3/dff3a3eef3fca5051c4d5cb96d276dec--ted-yahoo.jpg';
+    };
+    button4.addEventListener('click', func4);
+
+    var button5 = document.querySelectorAll('.b5')[0];
+    var func5 = function(event) {
+        event.target.id = 'ab';
+        document.querySelectorAll('.t5')[0].id = 'cd';
+    };
+    button5.addEventListener('click', func5);
+
+    var button6 = document.querySelectorAll('.b6')[0];
+    var func6 = function(event) {
+        event.target.innerText = 'Изменить текст';
+        document.querySelectorAll('.t6')[0].innerText = 'Тест пройден !!!';
+    };
+    button6.addEventListener('click', func6);
+
+    var button7 = document.querySelectorAll('.b7')[0];
+    var func7 = function(event) {
+        event.target.innerHTML = 'Цветы';
+        document.querySelectorAll('h5')[0].innerHTML = 'Цветы Цветы Цветы';
+    };
+    button7.addEventListener('click', func7);
+
+    var button8 = document.querySelectorAll('.b8')[0];
+    var func8 = function(event) {
+        event.target.fontSize = '';
+        document.querySelectorAll('.t8')[0].style.fontSize = '20px';
+    };
+    button8.addEventListener('click', func8)
+
+    var button9 = document.querySelectorAll('.b9')[0];
+    var func9 = function() {
+        document.querySelectorAll('.t9')[0].classList.add('hi');
+    };
+    button9.addEventListener('click', func9)
+
+    var button10 = document.querySelectorAll('.b10')[0];
+    var func10 = function() {
+        document.querySelectorAll('.t10')[0].classList.remove('hi');
+    };
+    button10.addEventListener('click', func10)
+
+    var button11 = document.querySelectorAll('.b11')[0];
+    var func11 = function() {
+        document.querySelectorAll('.t11')[0].classList.toggle('hi');
+    };
+    button11.addEventListener('click', func11)
+
+
+
 </script>
