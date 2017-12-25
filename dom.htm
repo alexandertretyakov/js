@@ -45,6 +45,10 @@
 <p class="z z12">12. При клике на любом эелементе страницы выводить className элемента</p>
 <p class="t t12">Тест</p>
 
+<p class="z z13">13. При клике на кнопку перевести текст на английский язык</p>
+<p class="t t13" data-en="sun" data-ua="Сонце" data-ru="Солнце">Солнце</p>
+<button class="b b13">Перевести</button>
+
 <style>
     .t {
         font-style: italic;
@@ -60,19 +64,13 @@
 </style>
 
 <script>
-    var button1 = document.querySelectorAll('.b1')[0];
-    var func1 = function(event) {
-        event.target.color = '';
-        document.querySelectorAll('.t1')[0].style.color = 'red'
-    };
-    button1.addEventListener('click', func1);
+    document.querySelector('.b1').addEventListener('click', function(event) {
+        document.querySelector('.t1').style.color = 'red'
+    });
 
-    var button2 = document.querySelectorAll('.b2')[0];
-    var func2 = function(event) {
-        event.target.backgroundColor = '';
-        document.querySelectorAll('.t2')[0].style.backgroundColor = 'green'
-    };
-    button2.addEventListener('click', func2);
+    document.querySelector('.b2').addEventListener('click', function(event) {
+        document.querySelector('.t2').style.backgroundColor = 'green'
+    });
 
     var button3 = document.querySelectorAll('.b3')[0];
     var func3 = function(event) {
@@ -133,7 +131,4 @@
         document.querySelectorAll('.t11')[0].classList.toggle('hi');
     };
     button11.addEventListener('click', func11);
-
-
-
 </script>
