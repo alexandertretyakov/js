@@ -1,0 +1,155 @@
+<p class="z z1">1. Вывести на экран анкету Жасмин</p>
+
+<div class="whores-container">
+    <div class="whore">
+        <div class="whore-name">Сильвия</div>
+        <img src="https://pbs.twimg.com/profile_images/760379049902481408/M94KYxLU.jpg" width="200">
+        <div class="whore-age">Возраст: 32</div>
+        <div class="whore-boobs">Размер груди: 3</div>
+        <div class="whore-weight">Рост: 170</div>
+        <div class="whore-height">Вес: 60</div>
+        <div class="whore-phone">+380960000000</div>
+        <div class="whore-can-come">Выезд: -</div>
+        <div class="whore-teaser">Я - симпатичная девочка экзотической внешности без комплексов и с огромной любовью к сексу! Я непревзойденная любовница, страстная, доступная и яркая! Я невероятно сексуальна и изобретательна, мила и непосредственна. Не теряй времени, звони мне, мой друг! Я скрашу твоё одиночество :)</div>
+    </div>
+</div>
+
+<button class="b b1">Добавить анкету</button>
+
+<p class="z z2">2. Переместить рыбу из первого контейнера во второй (и из второго в первый)</p>
+
+<div class="cats-container">
+    <div class="cat-container-1">
+        <img class="cat" src="http://cdn5.s.kolorado.ru/products/1/15/155/155529/111_1_6_design.png" width="100">
+        <img class="fish" src="http://src.akva-rybka.ru/zolotaja-rybka-risunok-karandashom_5_1.jpg" width="100">
+    </div>
+
+    <div class="cat-container-2">
+        <img class="cat" src="http://cdn5.s.kolorado.ru/products/1/15/155/155529/111_1_6_design.png" width="100">
+    </div>
+</div>
+
+<button class="b b2">Переместить рыбу</button>
+
+<p class="z z3">3. Удалить зуб</p>
+
+<div class="tooth-container">
+    <img class="tooth" src="http://www.happy-giraffe.ru/upload/userfiles/images/2012/02/24/8894921_m(2).jpg" width="200">
+    <img class="boy" src="http://worldonline.media.clients.ellingtoncms.com/img/croppedphotos/2009/12/02/Cole_Aldrich-rg05_t640.jpg" width="600">
+</div>
+
+<button class="b b3">Удалить зуб</button>
+
+<style>
+    /* -------------------------- Basic styles */
+    .z {
+        color: red;
+        margin: 1em 0;
+    }
+
+    /* -------------------------- Whores styles */
+    .whores-container {
+        background: #751a1a;
+        width: 680px;
+        height:  474px;
+        padding: 10px;
+        overflow: hidden;
+        margin-bottom: 1em;
+    }
+
+    .whore {
+        background: white;
+        padding: 10px;
+        width: 200px;
+        position: relative;
+        font-family: Arial;
+        font-size: 15px;
+        cursor: pointer;
+        float: left;
+        margin: 0 0 10px 10px;
+    }
+
+    .whore:first-child {
+        margin-left: 0;
+    }
+
+    .whore-name {
+        font-size: 22px;
+        font-family: Tahoma;
+        margin-bottom: 5px;
+        color: #7b1e1e;
+    }
+
+    .whore img {
+        margin-bottom: 10px;
+    }
+
+    .whore-teaser {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        box-sizing: border-box;
+        padding: 10px;
+        display: none;
+    }
+
+    .whore:hover .whore-teaser {
+        display: block;
+    }
+
+    .whore-phone {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 5px 0 1px;
+    }
+
+    /* -------------------------- Cats styles */
+    .cats-container {
+        width: 600px;
+        height: 200px;
+        margin-bottom: 1em;
+    }
+
+    .cat-container-1,
+    .cat-container-2 {
+        float: left;
+        width: 49%;
+        height: 200px;
+        box-sizing: border-box;
+        padding: 10px;
+        border: 1px dashed #000;
+        margin-left: 0.5%;
+    }
+
+    /* -------------------------- Tooth styles */
+    .tooth-container {
+        width: 600px;
+        height: 266px;
+        padding: 5px;
+        border: 1px solid black;
+        margin-bottom: 1em;
+    }
+
+    .tooth + .boy {
+        display: none;
+    }
+</style>
+
+<script>
+    var whore = {
+        name: 'Жасмин',
+        photo: 'https://farm1.static.flickr.com/646/21452934329_80a2a045b2_b.jpg',
+        age: '18',
+        boobs: '3',
+        weight: '50',
+        height: '168',
+        phone: '+380960000000',
+        can_come: true,
+        teaser: 'Очень нежная девчонка доставит Вам удовольствие по полной программе! Каждый мужчина ищет идеальную женщину - попробуй, может быть я именно та которая тебе нужна... Фото мои 1000%!!! Выезда НЕТ!!! Квартира для встреч ЕСТЬ, 5 мин от ст. метро \"Дворец Украина\"'
+    };
+
+    // JavaScript код писать тут
+</script>
