@@ -40,6 +40,12 @@
 
 <button class="b b3">Удалить зуб</button>
 
+<p class="z z4">4. Создать мир Марио <img src="https://image.prntscr.com/image/5uv0RawRSs2DOx2upYThtA.png"></p>
+
+<div class="scene"></div>
+
+<button class="b b4">Создать мир</button>
+
 <style>
     /* -------------------------- Basic styles */
     .z {
@@ -136,9 +142,83 @@
     .tooth + .boy {
         display: none;
     }
+
+    /* -------------------------- Mario styles */
+    .scene {
+        width: 800px;
+        height: 272px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid black;
+        margin-bottom: 1em;
+    }
+
+    .tile {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        background-image: url('mario_tileset.png');
+        background-repeat: no-repeat;
+        background-position: 16px 16px;
+    }
+
+    .tile.x_z {
+        background-position: -96px -112px;
+    }
+    .tile.x_k {
+        background-position: -144px -112px;
+    }
+    .tile.x_c {
+        background-position: -128px -112px;
+    }
+    .tile.x_t {
+        background-position: 0 -48px;
+        width: 32px;
+        height: 48px;
+    }
+    .tile.x_g {
+        background-position: 0 -128px;
+        width: 48px;
+        height: 32px;
+    }
+    .tile.x_b {
+        background-position: -144px -208px;
+        width: 80px;
+        height: 48px;
+    }
+    .tile.x_d {
+        background-position: 0 -96px;
+        width: 80px;
+        height: 32px;
+    }
+    .tile.x_w {
+        background-position: -96px -224px;
+        width: 48px;
+        height: 32px;
+    }
 </style>
 
 <script>
+    var map = [
+        '                                                  ',
+        '                                                  ',
+        '                                                  ',
+        '                    w                             ',
+        '                                       w          ',
+        '                                                  ',
+        '                       c                          ',
+        '                                                  ',
+        '                                        c         ',
+        '                                                  ',
+        '                c    kkkkk                        ',
+        ' b                                     t        c ',
+        '            d    g       d                        ',
+        '                                                  ',
+        'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz',
+        'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz',
+        'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'
+    ];
+
     var whore = {
         name: 'Жасмин',
         photo: 'https://farm1.static.flickr.com/646/21452934329_80a2a045b2_b.jpg',
