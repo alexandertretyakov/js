@@ -260,23 +260,57 @@
     };
 
     //---------------------------1-------------------------------
-    var el = document.createElement('div');
-    el.classList.add('whore');
-        document.querySelector('.whore').appendChild(el).classList.add('whore-name');
-        document.querySelector('.whore-name').innerText = whore.name;
+    document.querySelector('.b1').addEventListener('click', function() {
 
-        el.appendChild(document.createElement('img')).src = whore.photo;
-        document.querySelectorAll('.whore img')[0].style.width = '200px';
-        document.querySelectorAll('.whore img')[0].style.height = '300px';
+        var newGirl = document.createElement('div');
+        newGirl.classList.add('whore');
 
-        document.querySelector('.whore').appendChild(el).classList.add('whore-age');
-        document.querySelector('.whore-age').innerText = whore.age;
-    /*el.createElement('img');
-    el.style.src = 'https://farm1.static.flickr.com/646/21452934329_80a2a045b2_b.jpg';
-*/
+        var whoreName = document.createElement('div');
+        whoreName.classList.add('whore-name');
+        whoreName.innerText = whore.name;
+        newGirl.appendChild(whoreName);
 
-    document.querySelector('.whores-container').appendChild(el);
+        var whorePhoto = document.createElement('img');
+        whorePhoto.src = whore.photo;
+        whorePhoto.style.width = '200px';
+        newGirl.appendChild(whorePhoto);
 
+        var whoreAge = document.createElement('div');
+        whoreAge.innerText = 'Возраст: ' + whore.age;
+        newGirl.appendChild(whoreAge);
+
+        var whoreBoobs = document.createElement('div');
+        whoreBoobs.innerText = 'Размер груди:  ' + whore.boobs;
+        newGirl.appendChild(whoreBoobs);
+
+        var whoreWeight = document.createElement('div');
+        whoreWeight.innerText = 'Рост: ' + whore.weight;
+        newGirl.appendChild(whoreWeight);
+
+        var whoreHeight = document.createElement('div');
+        whoreHeight.innerText = 'Рост: ' + whore.height;
+        newGirl.appendChild(whoreHeight);
+
+        var whorePhone = document.createElement('div');
+        whorePhone.classList.add('whore-phone');
+        whorePhone.innerText = whore.phone;
+        newGirl.appendChild(whorePhone);
+
+        var whoreCanCome = document.createElement('div');
+        if (whore.can_come) {
+            whoreCanCome.innerText = 'Выезд: +';
+        } else {
+            whoreCanCome.innerText = 'Выезд: -';
+        }
+        newGirl.appendChild(whoreCanCome);
+
+        var whoreTeaser = document.createElement('div');
+        whoreTeaser.classList.add('whore-teaser');
+        whoreTeaser.innerText = whore.teaser;
+        newGirl.appendChild(whoreTeaser);
+
+        document.querySelector('.whores-container').appendChild(newGirl);
+    });
 
     //--------------------------------3------------------------
     document.querySelector('.b3').addEventListener('click', function() {
@@ -286,9 +320,9 @@
     //--------------2-----------------
     document.querySelector('.b2').addEventListener('click', function() {
         if(document.querySelector('.cat-container-1 .fish')){
-        document.querySelector('.cat-container-2').appendChild(document.querySelector('.fish'))}
-        else {document.querySelector('.cat-container-1').appendChild(document.querySelector('.fish'))}
+            document.querySelector('.cat-container-2').appendChild(document.querySelector('.fish'))
+        } else {
+            document.querySelector('.cat-container-1').appendChild(document.querySelector('.fish'))
+        }
     });
-
-    // JavaScript код писать тут
 </script>
