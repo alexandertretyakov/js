@@ -4,6 +4,7 @@
 
 //    console
 //    console.log
+
 //    document
 //    document.title
 //    document.querySelector('css selector')
@@ -14,6 +15,7 @@
 //    el.className
 //    el.innerText
 //    el.innerHTML
+
 //    el.style
 //    el.style.color
 //    el.style.backgroundColor
@@ -159,3 +161,53 @@ q.addEventListener('click', function() {
     alert('Клик');
 });
 //При нажатии на ссылку вылезает диалоговое окно "Клик"
+
+/*//document.createElement('tagName');
+ //el.appendChild(el);
+ //el.parentNode.removeChild(el);
+ //el.dataset
+ //setTimeout()
+ //setInterval()
+ //clearTimeout()
+ //clearInterval()
+
+ var el = document.createElement('div');
+ el.style.width = '200px'
+ el.style.height = '200px'
+ el.style.backgroundColor = 'red'
+ el.classList.add('huy');
+
+ document.querySelector('body').appendChild(el)
+ el.parentNode.removeChild(el)
+ document.querySelector('body').appendChild(el)
+ document.querySelector('body').removeChild(el)
+
+ setTimeout(function() {
+ console.log('ббаЙ аМббаОбаАаМ!');
+ }, 2000);
+ setTimeout(function() {
+ console.log('ббаЙ аМббаОбаАаМ!');
+ }, 4000);
+
+ setTimeout(function() {
+ var el = document.createElement('div');
+ el.style.width = '200px';
+ el.style.height = '200px';
+ el.style.backgroundColor = 'red';
+ el.classList.add('huy');
+ document.querySelector('body').appendChild(el);
+ }, 4000);
+
+ setInterval(function() {
+ var el = document.createElement('div');
+ el.style.width = '200px';
+ el.style.height = '200px';
+ el.style.backgroundColor = 'red';
+ el.classList.add('huy');
+ document.querySelector('body').appendChild(el);
+ }, 4000);
+
+ var id = setInterval(function() {
+ console.log('43243244232424324324');
+ }, 4000);
+ clearInterval(id);*/

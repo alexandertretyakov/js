@@ -1,3 +1,4 @@
+<body>
 <p class="z z1">1. При клике на кнопку изменить цвет текста</p>
 <p class="t t1">Тест</p>
 <button class="b b1">Изменить цвет текста</button>
@@ -23,7 +24,7 @@
 <button class="b b6">Изменить текст</button>
 
 <p class="z z7">7. При клике на кнопку изменить HTML</p>
-<p class="t t7">Тест <h5>Цветы</h5></p>
+<p class="t t7">Тест <b>Цветы</b></p>
 <button class="b b7">Изменить HTML</button>
 
 <p class="z z8">8. При клике на кнопку изменить размер шрифта</p>
@@ -64,71 +65,58 @@
 </style>
 
 <script>
-    document.querySelector('.b1').addEventListener('click', function(event) {
+    document.querySelector('.b1').addEventListener('click', function() {
         document.querySelector('.t1').style.color = 'red'
     });
 
-    document.querySelector('.b2').addEventListener('click', function(event) {
+    document.querySelector('.b2').addEventListener('click', function() {
         document.querySelector('.t2').style.backgroundColor = 'green'
     });
 
-    var button3 = document.querySelectorAll('.b3')[0];
-    var func3 = function(event) {
-        event.target.href = "https://habrahabr.ru/";
-        document.querySelectorAll('.t3 a')[0].href = 'http://zoo.kiev.ua/';
-    };
-    button3.addEventListener('click', func3);
+    document.querySelector('.b3').addEventListener('click', function() {
+        document.querySelectorAll('.t3 a')[0].href = 'http://zoo.kiev.ua/'
+    });
 
-    var button4 = document.querySelectorAll('.b4')[0];
-    var func4 = function(event) {
-        event.target.src = 'https://agronomu.com/media/res/1/1/4/7/6/11476.oj1cwc.300.jpg';
-        document.querySelectorAll('.t4 img')[0].src = 'https://i.pinimg.com/236x/df/f3/a3/dff3a3eef3fca5051c4d5cb96d276dec--ted-yahoo.jpg';
-    };
-    button4.addEventListener('click', func4);
+    document.querySelector('.b4').addEventListener('click', function() {
+        document.querySelectorAll('.t4 img')[0].src = 'https://i.pinimg.com/236x/df/f3/a3/dff3a3eef3fca5051c4d5cb96d276dec--ted-yahoo.jpg'
+    });
 
-    var button5 = document.querySelectorAll('.b5')[0];
-    var func5 = function(event) {
-        event.target.id = 'ab';
-        document.querySelectorAll('.t5')[0].id = 'cd';
-    };
-    button5.addEventListener('click', func5);
+    document.querySelector('.b5').addEventListener('click', function() {
+        document.querySelectorAll('.t5')[0].id = 'cd'
+    });
 
-    var button6 = document.querySelectorAll('.b6')[0];
-    var func6 = function(event) {
-        event.target.innerText = 'Изменить текст';
-        document.querySelectorAll('.t6')[0].innerText = 'Тест пройден !!!';
-    };
-    button6.addEventListener('click', func6);
+    document.querySelector('.b6').addEventListener('click', function() {
+        document.querySelectorAll('.t6')[0].innerText = 'Тест пройден !!!'
+    });
 
-    var button7 = document.querySelectorAll('.b7')[0];
-    var func7 = function(event) {
-        event.target.innerHTML = 'Цветы';
-        document.querySelectorAll('h5')[0].innerHTML = 'Цветы Цветы Цветы';
-    };
-    button7.addEventListener('click', func7);
+    document.querySelector('.b7').addEventListener('click', function() {
+        document.querySelectorAll('.t7')[0].innerHTML = '<b>Test Flowers</b>'
+    });
 
-    var button8 = document.querySelectorAll('.b8')[0];
-    var func8 = function(event) {
-        event.target.fontSize = '';
-        document.querySelectorAll('.t8')[0].style.fontSize = '20px';
-    };
-    button8.addEventListener('click', func8);
+    document.querySelector('.b8').addEventListener('click', function() {
+        document.querySelectorAll('.t8')[0].style.fontSize = '20px'
+    });
 
-    var button9 = document.querySelectorAll('.b9')[0];
-    var func9 = function() {
+    document.querySelector('.b9').addEventListener('click', function() {
         document.querySelectorAll('.t9')[0].classList.add('hi');
-    };
-    button9.addEventListener('click', func9);
+    });
 
-    var button10 = document.querySelectorAll('.b10')[0];
-    var func10 = function() {
+    document.querySelector('.b10').addEventListener('click', function() {
         document.querySelectorAll('.t10')[0].classList.remove('hi');
-    };
-    button10.addEventListener('click', func10);
+    });
 
-    var button11 = document.querySelectorAll('.b11')[0];
-    var func11 = function() {
+    document.querySelector('.b11').addEventListener('click', function() {
         document.querySelectorAll('.t11')[0].classList.toggle('hi');
-    };
-    button11.addEventListener('click', func11);
+    });
+
+    document.querySelectorAll('body')[0].addEventListener('click', function(event) {
+        document.querySelectorAll('.t12')[0].innerText = event.target.className;
+    });
+
+    document.querySelector('.b13').addEventListener('click', function() {
+        var a = document.querySelector('.t13').dataset.en;
+        document.querySelector('.t13').innerText = a;
+    });
+
 </script>
+</body>

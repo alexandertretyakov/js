@@ -267,32 +267,50 @@
 
 <script>
     //---------------2----------------
-    var button = document.querySelectorAll('.question')[0];
-    var func = function() {
+    document.querySelectorAll('.question')[0].addEventListener('click', function() {
         document.querySelectorAll('.question')[0].classList.toggle('active');
-    };
-    button.addEventListener('click', func);
+    });
 
-    var button1 = document.querySelectorAll('.question')[1];
-    var func1 = function() {
+    document.querySelectorAll('.question')[1].addEventListener('click', function() {
         document.querySelectorAll('.question')[1].classList.toggle('active');
-    };
-    button1.addEventListener('click', func1);
+    });
 
-    var button2 = document.querySelectorAll('.question')[2];
-    var func2 = function() {
+
+    document.querySelectorAll('.question')[2].addEventListener('click', function() {
         document.querySelectorAll('.question')[2].classList.toggle('active');
-    };
-    button2.addEventListener('click', func2);
+    });
 
-    var button3 = document.querySelectorAll('.question')[3];
-    var func3 = function() {
+    document.querySelectorAll('.question')[3].addEventListener('click', function() {
         document.querySelectorAll('.question')[3].classList.toggle('active');
-    };
-    button3.addEventListener('click', func3);
+    });
+
+    //---------------4-------------------
+    //Кликая на кнопку Login я хочу чтобы затенялся экран и по середине экрана появлялось окошко для авторизации закрыть
+    // которое можно кликнув по кнопке с крестиком
+
+    document.querySelectorAll('.show-login-pop-up')[0].addEventListener('click', function() {
+        document.querySelectorAll('.overlay')[0].classList.remove('hidden');
+        document.querySelectorAll('.pop-up')[0].classList.remove('hidden');
+    });
+
+    document.querySelectorAll('.close')[0].addEventListener('click', function() {
+        document.querySelectorAll('.overlay')[0].classList.add('hidden');
+        document.querySelectorAll('.pop-up')[0].classList.add('hidden');
+    });
 
     //---------------5-------------------
     // Динамически добавить 400 блоков в блок .tiles
+    var i = 0;
+    while(i < 400) {
+        var el = document.createElement('div');
+        el.style.width = '20px';
+        el.style.height = '20px';
+        el.style.float = 'left';
+        el.classList.add('mikki');
+        document.querySelector('.tiles').appendChild(el);
+        i = i + 1;
+    };
+
 
     var i = 0;
     var array = [2, 3, 4, 5, 15, 16, 17, 21, 22, 23, 24, 25, 26, 33, 34, 35, 36, 37, 38, 40, 41, 42, 43, 45, 46, 48, 49,
@@ -304,7 +322,7 @@
         325, 326, 328, 329, 330, 331, 333, 334, 345, 346, 353, 354, 364, 365, 374, 375, 383, 384, 385, 386, 387, 388,
         389, 390, 391, 392, 393, 394, 395, 396];
     while (i < array.length) {
-        document.querySelectorAll('.tile')[array[i]].style.backgroundColor = 'black';
+        document.querySelectorAll('.mikki')[array[i]].style.backgroundColor = 'black';
         i = i + 1;
     };
 </script>

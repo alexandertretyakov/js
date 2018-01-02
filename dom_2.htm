@@ -259,5 +259,36 @@
         teaser: 'Очень нежная девчонка доставит Вам удовольствие по полной программе! Каждый мужчина ищет идеальную женщину - попробуй, может быть я именно та которая тебе нужна... Фото мои 1000%!!! Выезда НЕТ!!! Квартира для встреч ЕСТЬ, 5 мин от ст. метро \"Дворец Украина\"'
     };
 
+    //---------------------------1-------------------------------
+    var el = document.createElement('div');
+    el.classList.add('whore');
+        document.querySelector('.whore').appendChild(el).classList.add('whore-name');
+        document.querySelector('.whore-name').innerText = whore.name;
+
+        el.appendChild(document.createElement('img')).src = whore.photo;
+        document.querySelectorAll('.whore img')[0].style.width = '200px';
+        document.querySelectorAll('.whore img')[0].style.height = '300px';
+
+        document.querySelector('.whore').appendChild(el).classList.add('whore-age');
+        document.querySelector('.whore-age').innerText = whore.age;
+    /*el.createElement('img');
+    el.style.src = 'https://farm1.static.flickr.com/646/21452934329_80a2a045b2_b.jpg';
+*/
+
+    document.querySelector('.whores-container').appendChild(el);
+
+
+    //--------------------------------3------------------------
+    document.querySelector('.b3').addEventListener('click', function() {
+        document.querySelector('.tooth-container').removeChild(document.querySelector('.tooth'));
+    });
+
+    //--------------2-----------------
+    document.querySelector('.b2').addEventListener('click', function() {
+        if(document.querySelector('.cat-container-1 .fish')){
+        document.querySelector('.cat-container-2').appendChild(document.querySelector('.fish'))}
+        else {document.querySelector('.cat-container-1').appendChild(document.querySelector('.fish'))}
+    });
+
     // JavaScript код писать тут
 </script>
