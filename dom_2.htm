@@ -247,6 +247,46 @@
         'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'
     ];
 
+    document.querySelector('.b4').addEventListener('click', function() {
+    var i = 0;
+    while (i < map.length) {
+        var j = 0;
+        while (j < map[i].length) {
+            var el = document.createElement('div');
+            el.classList.add('tile');
+            if (map[i][j] === 'w') {
+                el.classList.add('x_w');
+            }
+            if (map[i][j] === 'c') {
+                el.classList.add('x_c');
+            }
+            if (map[i][j] === 'k') {
+                el.classList.add('x_k');
+            }
+            if (map[i][j] === 'b') {
+                el.classList.add('x_b');
+            }
+            if (map[i][j] === 't') {
+                el.classList.add('x_t');
+            }
+            if (map[i][j] === 'd') {
+                el.classList.add('x_d');
+            }
+            if (map[i][j] === 'g') {
+                el.classList.add('x_g');
+            }
+            if (map[i][j] === 'z') {
+                el.classList.add('x_z');
+            }
+            el.style.top = i * 16;
+            el.style.left = j * 16;
+            document.querySelector('.scene').appendChild(el);
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+    });
+
     var whore = {
         name: 'Жасмин',
         photo: 'https://farm1.static.flickr.com/646/21452934329_80a2a045b2_b.jpg',
@@ -324,5 +364,19 @@
         } else {
             document.querySelector('.cat-container-1').appendChild(document.querySelector('.fish'))
         }
+    });
+
+  //------5-----------------
+    document.querySelector('.b5').addEventListener('click', function() {
+        var sum = 0;
+        var timer = setInterval(function() {
+            sum = sum + 5;
+            var el = document.querySelector('.skier');
+            el.style.left = sum;
+        }, 16);
+    });
+
+    document.querySelector('.b5-2').addEventListener('click', function() {
+            clearInterval(timer);
     });
 </script>
