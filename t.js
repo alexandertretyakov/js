@@ -315,21 +315,21 @@ while (i < m.length) {
 }
 console.log('Сумма = ', sum);
 
-var getMatrixSum = function() {
-    var a = [
+var getMatrixSum = function(array) {
+    var array = [
         [1, 1, 1],
         [2, 2, 2],
         [3, 3, 3]
     ];
-
     var i = 0;
     var sum = 0;
-    while (i < a.length) {
+    while (i < array.length) {
         var j = 0;
-        while (j < a[i].length) {
-            sum = sum + a[i][j];
+        while (j < array[i].length) {
+            sum = sum + array[i][j];
             j = j + 1;
         }
         i = i + 1;
     }
+    return sum;
 };
