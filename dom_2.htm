@@ -247,46 +247,6 @@
         'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'
     ];
 
-    document.querySelector('.b4').addEventListener('click', function() {
-    var i = 0;
-    while (i < map.length) {
-        var j = 0;
-        while (j < map[i].length) {
-            var el = document.createElement('div');
-            el.classList.add('tile');
-            if (map[i][j] === 'w') {
-                el.classList.add('x_w');
-            }
-            if (map[i][j] === 'c') {
-                el.classList.add('x_c');
-            }
-            if (map[i][j] === 'k') {
-                el.classList.add('x_k');
-            }
-            if (map[i][j] === 'b') {
-                el.classList.add('x_b');
-            }
-            if (map[i][j] === 't') {
-                el.classList.add('x_t');
-            }
-            if (map[i][j] === 'd') {
-                el.classList.add('x_d');
-            }
-            if (map[i][j] === 'g') {
-                el.classList.add('x_g');
-            }
-            if (map[i][j] === 'z') {
-                el.classList.add('x_z');
-            }
-            el.style.top = i * 16;
-            el.style.left = j * 16;
-            document.querySelector('.scene').appendChild(el);
-            j = j + 1;
-        }
-        i = i + 1;
-    }
-    });
-
     var whore = {
         name: 'Жасмин',
         photo: 'https://farm1.static.flickr.com/646/21452934329_80a2a045b2_b.jpg',
@@ -299,7 +259,7 @@
         teaser: 'Очень нежная девчонка доставит Вам удовольствие по полной программе! Каждый мужчина ищет идеальную женщину - попробуй, может быть я именно та которая тебе нужна... Фото мои 1000%!!! Выезда НЕТ!!! Квартира для встреч ЕСТЬ, 5 мин от ст. метро \"Дворец Украина\"'
     };
 
-    //---------------------------1-------------------------------
+    // Задание 1
     document.querySelector('.b1').addEventListener('click', function() {
 
         var newGirl = document.createElement('div');
@@ -352,12 +312,12 @@
         document.querySelector('.whores-container').appendChild(newGirl);
     });
 
-    //--------------------------------3------------------------
+    // Задание 2
     document.querySelector('.b3').addEventListener('click', function() {
         document.querySelector('.tooth-container').removeChild(document.querySelector('.tooth'));
     });
 
-    //--------------2-----------------
+    // Задание 3
     document.querySelector('.b2').addEventListener('click', function() {
         if(document.querySelector('.cat-container-1 .fish')){
             document.querySelector('.cat-container-2').appendChild(document.querySelector('.fish'))
@@ -366,17 +326,58 @@
         }
     });
 
-  //------5-----------------
+    // Задание 4
+    document.querySelector('.b4').addEventListener('click', function() {
+        var i = 0;
+        while (i < map.length) {
+            var j = 0;
+            while (j < map[i].length) {
+                var el = document.createElement('div');
+                el.classList.add('tile');
+                if (map[i][j] === 'w') {
+                    el.classList.add('x_w');
+                }
+                if (map[i][j] === 'c') {
+                    el.classList.add('x_c');
+                }
+                if (map[i][j] === 'k') {
+                    el.classList.add('x_k');
+                }
+                if (map[i][j] === 'b') {
+                    el.classList.add('x_b');
+                }
+                if (map[i][j] === 't') {
+                    el.classList.add('x_t');
+                }
+                if (map[i][j] === 'd') {
+                    el.classList.add('x_d');
+                }
+                if (map[i][j] === 'g') {
+                    el.classList.add('x_g');
+                }
+                if (map[i][j] === 'z') {
+                    el.classList.add('x_z');
+                }
+                el.style.top = i * 16;
+                el.style.left = j * 16;
+                document.querySelector('.scene').appendChild(el);
+                j = j + 1;
+            }
+            i = i + 1;
+        }
+    });
+
+    // Задание 5
     document.querySelector('.b5').addEventListener('click', function() {
-        var sum = 0;
+        var x = 0;
         var timer = setInterval(function() {
-            sum = sum + 5;
+            x = x + 5;
             var el = document.querySelector('.skier');
-            el.style.left = sum;
+            el.style.left = x;
         }, 16);
     });
 
     document.querySelector('.b5-2').addEventListener('click', function() {
-            clearInterval(timer);
+        clearInterval(timer);
     });
 </script>

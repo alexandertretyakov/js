@@ -285,3 +285,42 @@ var invert = function(obj) {
     }
     return o;
 };
+
+
+
+
+
+
+
+
+
+
+
+var m = [
+    [
+        [1,2,3,4],
+        [5,6,7],
+        [8,9,10,11,12]
+    ],
+    [
+        [13,14],
+        [15,16,17,18,19,20],
+        [21,22,23]
+    ]
+];
+
+var i = 0;
+var sum = 0;
+while (i < m.length) {
+    var k = 0;
+    while (k < m[i].length) {
+        var j = 0;
+        while (j < m[i][k].length) {
+            sum = sum + m[i][k][j];
+            j = j + 1;
+        }
+        k = k + 1;
+    }
+    i = i + 1;
+}
+console.log('Сумма = ', sum);
