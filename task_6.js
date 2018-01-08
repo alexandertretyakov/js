@@ -1,35 +1,41 @@
-/*Понавыдумывай себе заданий по этой хуйне
-Поизменяй элементы страницы
-и поработай с событиями*/
-
-//    console
-//    console.log
-
-//    document
-//    document.title
-//    document.querySelector('css selector')
-//    document.querySelectorAll('css selector')
-//    el.src
-//    el.href
-//    el.id
-//    el.className
-//    el.innerText
-//    el.innerHTML
-
-//    el.style
-//    el.style.color
-//    el.style.backgroundColor
-//    el.style.fontSize
-//    el.style.border
-//    el.classList.add('class name') Добавляет класс
-//    el.classList.remove('class name') Удаляет класс
-//    el.classList.contains('class name') Проверяет, есть ли данный класс у элемента (вернет true или false)
-//    el.classList.toggle('class name')     Если класс у элемента отсутствует - добавляет, иначе - убирает. Когда вторым параметром передано false - удаляет указанный класс, а если true - добавляет.Если вторым параметром передан undefined или переменная с typeof == 'undefined', поведение будет аналогичным передаче только первого параметра при вызове toggle.
-
-//    el.addEventListener('click', function(event) {
-//        // Пиши свой код тут!
-//        // event.target
-//    });
+// API браузера
+//
+// console
+// console.log()
+//
+// document
+// document.title
+// document.querySelector('cssSelector')
+// document.querySelectorAll('cssSelector')
+// document.createElement('tagName')
+//
+// el.src
+// el.href
+// el.id
+// el.className
+// el.dataset
+// el.innerText
+// el.innerHTML
+// el.style
+// el.style.color
+// el.style.backgroundColor
+// el.style.fontSize
+// el.style.border
+// el.classList.add('className')
+// el.classList.remove('className')
+// el.classList.contains('className')
+// el.classList.toggle('className')
+// el.appendChild(el)
+// el.parentNode.removeChild(el)
+// el.addEventListener('click', function(event) {
+//     // Тело функции-обработчика события
+//     // event.target
+// });
+//
+// setTimeout(f, ms)
+// clearTimeout(id)
+// setInterval(f, ms)
+// clearInterval(id)
 
 
 //------------------------------------------------ console ------------------------------------------------
@@ -161,53 +167,3 @@ q.addEventListener('click', function() {
     alert('Клик');
 });
 //При нажатии на ссылку вылезает диалоговое окно "Клик"
-
-/*//document.createElement('tagName');
- //el.appendChild(el);
- //el.parentNode.removeChild(el);
- //el.dataset
- //setTimeout()
- //setInterval()
- //clearTimeout()
- //clearInterval()
-
- var el = document.createElement('div');
- el.style.width = '200px'
- el.style.height = '200px'
- el.style.backgroundColor = 'red'
- el.classList.add('huy');
-
- document.querySelector('body').appendChild(el)
- el.parentNode.removeChild(el)
- document.querySelector('body').appendChild(el)
- document.querySelector('body').removeChild(el)
-
- setTimeout(function() {
- console.log('ббаЙ аМббаОбаАаМ!');
- }, 2000);
- setTimeout(function() {
- console.log('ббаЙ аМббаОбаАаМ!');
- }, 4000);
-
- setTimeout(function() {
- var el = document.createElement('div');
- el.style.width = '200px';
- el.style.height = '200px';
- el.style.backgroundColor = 'red';
- el.classList.add('huy');
- document.querySelector('body').appendChild(el);
- }, 4000);
-
- setInterval(function() {
- var el = document.createElement('div');
- el.style.width = '200px';
- el.style.height = '200px';
- el.style.backgroundColor = 'red';
- el.classList.add('huy');
- document.querySelector('body').appendChild(el);
- }, 4000);
-
- var id = setInterval(function() {
- console.log('43243244232424324324');
- }, 4000);
- clearInterval(id);*/

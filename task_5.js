@@ -1,5 +1,4 @@
 var expectation = function(str, expression) {
-    console.log();
     if (expression) {
         console.log(str + ' выполнен успешно!');
     } else {
@@ -9,34 +8,17 @@ var expectation = function(str, expression) {
 
 
 
-//--------------------------------------------- 1 ---------------------------------------------
-//Проверить, что на странице присутствует логотип. Проверить путь ссылки и путь к изображению логотипа.
-
-var testLink = document.querySelectorAll('#logo a')[0].href;
-expectation('Тест №1.1', testLink === "http://zoo.kiev.ua/");
-
-
-var testImage = document.querySelectorAll('#header_top #logo a img')[0].src;
-expectation('Тест №1.2', testImage === "http://zoo.kiev.ua/images/logo290_proz.png");
+// Задание 1
+// Проверить, что на странице присутствует логотип. Проверить путь ссылки и путь к изображению логотипа.
+expectation('Тест №1.1', document.querySelectorAll('#logo a')[0].href === "http://zoo.kiev.ua/");
+expectation('Тест №1.2', document.querySelectorAll('#header_top #logo a img')[0].src === "http://zoo.kiev.ua/images/logo290_proz.png");
 
 
-
-
-
-
-//--------------------------------------------- 2 ---------------------------------------------
-//Проверить, что на странице в верхнем меню 8 пунктов и что они соответствуют своим текстовым идентификаторам.
-
-
+// Задание 2
+// Проверить, что на странице в верхнем меню 8 пунктов и что они соответствуют своим текстовым идентификаторам.
 
 //-----------------------------------------------2.1
-var testing = document.querySelectorAll('#ul_catalog_menu_Lk7Vbr .bx-nav-1-lvl').length;
-//undefined
-
-/*console.log(testing)
-8*/
-
-expectation('Тест №1.1', testing  === 8);
+expectation('Тест №1.1', document.querySelectorAll('#ul_catalog_menu_Lk7Vbr .bx-nav-1-lvl').length  === 8);
 
 
 //-----------------------------------------------2.2

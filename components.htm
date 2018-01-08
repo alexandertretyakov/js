@@ -93,10 +93,6 @@
 
 <button class="show-login-pop-up">Login</button>
 
-<p class="z">5. Хочу такое <img src="https://image.prntscr.com/image/foS5cWxDQ6CFUAE8nNpb9g.png"></p>
-
-<div class="tiles"></div>
-
 <style>
     /* -------------------------- Basic styles */
     .z {
@@ -249,20 +245,6 @@
     .pop-up .close:hover {
         background: #912626;
     }
-
-
-    /* -------------------------- Tiles styles */
-    .tiles {
-        width: 400px;
-        height: 400px;
-        border: 1px solid black;
-    }
-
-    .tile {
-        width: 20px;
-        height: 20px;
-        float: left;
-    }
 </style>
 
 <script>
@@ -276,29 +258,30 @@
         }
         return -1;
     };
+
     // Задание 1
+    var selectNextSlide = function(increment) {
+        var $array = document.querySelectorAll('.slide');
+        var $currentSlide = document.querySelector('.slider .active');
+        var currentIndex = indexOf($array, $currentSlide);
+        var nextIndex = currentIndex + increment;
+
+        if (nextIndex > $array.length - 1) {
+            nextIndex = 0;
+        } else if (nextIndex < 0) {
+            nextIndex = $array.length - 1;
+        }
+
+        $currentSlide.classList.remove('active');
+        $array[nextIndex].classList.add('active');
+    };
+
    document.querySelector('.next').addEventListener('click', function() {
-       var currentSlide = document.querySelector('.slider .active');
-       currentSlide.classList.remove('active');
-       var currentIndex = indexOf(document.querySelectorAll('.slide'), currentSlide);
-       if( currentIndex === document.querySelectorAll('.slide').length - 1 ) {
-           var nextSlide = document.querySelectorAll('.slide')[0];
-       } else {
-           var nextSlide = document.querySelectorAll('.slide')[currentIndex + 1];
-       }
-       nextSlide.classList.add('active')
+       selectNextSlide(1);
    });
 
     document.querySelector('.previous').addEventListener('click', function() {
-        var currentSlide = document.querySelector('.slider .active');
-        currentSlide.classList.remove('active');
-        var currentIndex = indexOf(document.querySelectorAll('.slide'), currentSlide);
-        if( currentIndex === 0 ) {
-            var previousSlide = document.querySelectorAll('.slide')[document.querySelectorAll('.slide').length - 1];
-        } else {
-            var previousSlide = document.querySelectorAll('.slide')[currentIndex - 1];
-        }
-        previousSlide.classList.add('active')
+        selectNextSlide(-1);
     });
 
     // Задание 2
@@ -319,52 +302,13 @@
     });
 
     // Задание 4
-    document.querySelectorAll('.show-login-pop-up')[0].addEventListener('click', function() {
-        document.querySelectorAll('.overlay')[0].classList.remove('hidden');
-        document.querySelectorAll('.pop-up')[0].classList.remove('hidden');
+    document.querySelector('.show-login-pop-up').addEventListener('click', function() {
+        document.querySelector('.overlay').classList.remove('hidden');
+        document.querySelector('.pop-up').classList.remove('hidden');
     });
 
-    document.querySelectorAll('.close')[0].addEventListener('click', function() {
-        document.querySelectorAll('.overlay')[0].classList.add('hidden');
-        document.querySelectorAll('.pop-up')[0].classList.add('hidden');
+    document.querySelector('.close').addEventListener('click', function() {
+        document.querySelector('.overlay').classList.add('hidden');
+        document.querySelector('.pop-up').classList.add('hidden');
     });
-
-    // Задание 5
-    var mikki = [
-        '  XXXX        XXXX  ',
-        ' XXXXXX      XXXXXX ',
-        'XXXX XX XXXX XX XXXX',
-        'XXX  XXXXXXXXXX  XXX',
-        'XXXXXXXXXXXXXXXXXXXX',
-        'XXXXXXX      XXXXXXX',
-        ' XXXXX        XXXXX ',
-        '   XXX  XX XX XXX   ',
-        '    XX  XX XX XX    ',
-        '    XXX X  X  XX    ',
-        '    X         XX    ',
-        '    X    XXX  XX    ',
-        '    XX   XXX  XX    ',
-        '     XX      XX     ',
-        '      X  XX  X      ',
-        '       X    X       ',
-        '     XX XXXX XX     ',
-        '     XX      XX     ',
-        '    XX        XX    ',
-        '   XXXXXXXXXXXXXX    '
-    ];
-
-    var i = 0;
-    while(i < mikki.length) {
-        var j = 0;
-        while (j < mikki[i].length) {
-            var el = document.createElement('div');
-            el.classList.add('tile');
-            if (mikki[i][j] === 'X') {
-                el.style.backgroundColor = 'black';
-            }
-            document.querySelector('.tiles').appendChild(el);
-            j = j + 1;
-        }
-        i = i + 1;
-    }
 </script>
