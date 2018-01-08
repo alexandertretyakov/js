@@ -368,9 +368,10 @@
     });
 
     // Задание 5
+    var timer;
     document.querySelector('.b5').addEventListener('click', function() {
         var x = 0;
-        var timer = setInterval(function() {
+        timer = setInterval(function() {
             x = x + 5;
             var el = document.querySelector('.skier');
             el.style.left = x;

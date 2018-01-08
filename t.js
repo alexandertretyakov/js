@@ -316,11 +316,6 @@ while (i < m.length) {
 console.log('Сумма = ', sum);
 
 var getMatrixSum = function(array) {
-    var array = [
-        [1, 1, 1],
-        [2, 2, 2],
-        [3, 3, 3]
-    ];
     var i = 0;
     var sum = 0;
     while (i < array.length) {
@@ -333,3 +328,21 @@ var getMatrixSum = function(array) {
     }
     return sum;
 };
+
+var getMatrixSumByDiagonal = function(array) {
+    var j = 0;
+    var sum = 0;
+    while (j < array.length) {
+        sum = sum + array[j][j];
+        j = j + 1;
+
+    }
+    return sum;
+};
+
+var array = [
+    [1, 1, 1],
+    [2, 2, 2],
+    [3, 3, 3]
+];
+
