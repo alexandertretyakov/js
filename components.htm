@@ -285,21 +285,13 @@
     });
 
     // Задание 2
-    document.querySelectorAll('.question')[0].addEventListener('click', function() {
-        document.querySelectorAll('.question')[0].classList.toggle('active');
+    document.querySelector('.question').addEventListener('click', function(event) {
+        var el = event.target.parentNode;
+        if (el.tagName === 'DT') {
+            el.classList.toggle('active');
+        }
     });
 
-    document.querySelectorAll('.question')[1].addEventListener('click', function() {
-        document.querySelectorAll('.question')[1].classList.toggle('active');
-    });
-
-    document.querySelectorAll('.question')[2].addEventListener('click', function() {
-        document.querySelectorAll('.question')[2].classList.toggle('active');
-    });
-
-    document.querySelectorAll('.question')[3].addEventListener('click', function() {
-        document.querySelectorAll('.question')[3].classList.toggle('active');
-    });
 
     // Задание 4
     document.querySelector('.show-login-pop-up').addEventListener('click', function() {
@@ -310,5 +302,24 @@
     document.querySelector('.close').addEventListener('click', function() {
         document.querySelector('.overlay').classList.add('hidden');
         document.querySelector('.pop-up').classList.add('hidden');
+    });
+
+    // Задание 3
+    var tabs = function() {
+        var $tab = document.querySelectorAll('.x-tabs x-tab');
+
+        var i = 0;
+        while (i < $tab.length) {
+            $tab[i].classList.remove('active');
+            i++;
+        }
+    };
+
+    document.querySelector('.x-tabs').addEventListener('click', function (event) {
+        if (event.target.tagName === 'DIV') {
+            tabs();
+            event.target.classList.add('active');
+            document.querySelectorAll('.x-tab').classList.add('active');
+        }
     });
 </script>

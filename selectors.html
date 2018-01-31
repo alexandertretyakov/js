@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Изучение свойств</title>
+    </head>
+
+    <body>
+        <div id="page">
+            <div class="header">
+                <h1 align="center">Проверка атрибута</h1> <!--[name="value"] – селекторы на атрибут-->
+            </div>
+
+            <div class="content">
+                <div class="с1 с2">
+                    <a class="link" href="#">Link</a>
+                </div>
+
+                <div class="parent">
+                    <p>Мама</p>
+                    <p>Папа</p>
+                    <p>Тётя</p>
+                    <p>Дядя</p>
+                    <div class="children">
+                        <p>Сынок</p>
+                        <p>Доця</p>
+                        <p>Племянники</p>
+                        <p>Племянница</p>
+                    </div>
+                </div>
+
+                <div class="numbers">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                    <p>6</p>
+                    <p>7</p>
+                    <p>8</p>
+                </div>
+
+                <div class="words">
+                    <p>A</p>
+                    <p>B</p>
+                    <p>C</p>
+                    <p>D</p>
+                    <p>E</p>
+                    <p>F</p>
+                    <p>G</p>
+                    <p>H</p>
+                </div>
+
+                <dl>
+                    <dt>Первый dt</dt>
+                    <dd>Описание dd</dd>
+                    <dt>Второй dt</dt>
+                    <dd>Описание dd</dd>
+                    <dt>Третий dt</dt>
+                    <dd>Описание dd</dd>
+                    <dt>Четвёртый dt</dt>
+                    <dd>Описание dd</dd>
+                </dl>
+
+                <div class="two">
+                    <p>1</p>
+                    <p>2</p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <style>
+
+        /*--------------------------------------------------------------------------Основные виды селекторов*/
+
+        * {                             /* * – любые элементы.*/
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-color: #1234;
+        }
+
+        #page {                         /*div - элемент с таким тегом*/ /*Задание3 #id – элемент с данным id*/
+            padding: 0 auto;
+        }
+
+        .header {                       /*.class – элементы с таким классом.*/
+            height: 50px;
+            background: #456;
+        }
+
+        .content {
+            margin-left: 50px;
+        }
+
+        .с1 {                         /*.c1.c2 – элементы одновременно с двумя классами c1 и c2*/
+            width: 140px;
+            height: 140px;
+        }
+
+        .с2 {
+            background: red;
+        }
+
+        .link {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .link:hover {
+            background: #987;/*:visited – «псевдоклассы»*/
+            color: aliceblue;
+        }
+
+        /*--------------------------------------------------------------------------Отношения*/
+
+        .parent p {
+            font-size: 30px;
+        }
+
+        .parent > p {
+            color: yellow;
+        }
+
+        /*--------------------------------------------------------------------------Фильтр по месту среди соседей*/
+
+        .numbers p,
+        .words p {
+            font-size: 40px;
+        }
+
+        .numbers p:first-child { /*первый потомок своего родителя.*/
+            color: red;
+        }
+
+        .numbers p:last-child {/*последний потомок своего родителя.*/
+            color: blue;
+        }
+
+        .numbers p:nth-child(2) { /*потомок номер a своего родителя, например :nth-child(2) – второй потомок. */
+            color: yellow;
+        }
+
+        .words p:nth-child(2n+1) {
+            color: orange;
+        }
+
+        .words p:nth-child(2n) {
+            color: yellow;
+        }
+
+        /*--------------------------------------------------------------------------Фильтр по месту среди соседей с тем же тегом*/
+
+        dl {
+            font-size: 25px;
+        }
+
+        dd:first-of-type { /*Первый dd*/
+            color: green;
+        }
+
+        dd:last-of-type { /*Последний dd снизу*/
+            color: brown;
+        }
+
+        dd:nth-of-type(3) {/*Третий dd сверху*/
+            color: yellow;
+        }
+
+        dt:nth-last-of-type(3) { /*Третий dt снизу*/
+            color: purple;
+        }
+
+        /*--------------------------------------------------------------------------Псевдоэлементы ::before, ::after*/
+        .two {
+            font-size: 30px;
+        }
+
+        .two p::before {         /*::before - добавляет контент перед р*/
+            content: " '' ";
+        }
+
+        .two p::after {         /*::after - добавляет контент после р*/
+            content: " '' ";
+        }
+    </style>
+</html>
