@@ -18,7 +18,7 @@
 
                 <div class="parent">
                     <p>Мама</p>
-                    <p>Папа</p>
+                    <p class="father">Папа</p>
                     <p>Тётя</p>
                     <p>Дядя</p>
                     <div class="children">
@@ -66,6 +66,20 @@
                     <p>1</p>
                     <p>2</p>
                 </div>
+
+                <a class>link</a>
+                <a class="list">link</a>
+                <a class="list-style">link</a>
+                <a class="list-interval">link</a>
+                <a>link</a>
+
+                <div class="empty not">111</div>
+                <div class="empty not">111</div>
+                <div class="empty">111</div>
+                <div class="empty not">111</div>
+                <div class="empty not"></div>
+                <div class="empty not">111</div>
+                <div class="empty">111</div>
             </div>
         </div>
     </body>
@@ -86,7 +100,7 @@
             background-color: #1234;
         }
 
-        #page {                         /*div - элемент с таким тегом*/ /*Задание3 #id – элемент с данным id*/
+        #page {                         /*div - элемент с таким тегом*/ /*#id – элемент с данным id*/
             padding: 0 auto;
         }
 
@@ -118,6 +132,12 @@
             color: aliceblue;
         }
 
+        /*--------------------------------------------------------------------------Комбинирование*/
+
+        div.empty.not {
+            border: 5px solid blue;
+        }
+
         /*--------------------------------------------------------------------------Отношения*/
 
         .parent p {
@@ -126,6 +146,14 @@
 
         .parent > p {
             color: yellow;
+        }
+
+        .father ~ p {
+            font-size: 15px;
+        }
+
+        .father + p {
+            font-size: 50px;
         }
 
         /*--------------------------------------------------------------------------Фильтр по месту среди соседей*/
@@ -176,6 +204,39 @@
         dt:nth-last-of-type(3) { /*Третий dt снизу*/
             color: purple;
         }
+
+        /*--------------------------------------------------------------------------Другие псевдоклассы*/
+
+        .empty {
+            width: 100px;
+            height: 100px;
+            background: green;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .empty:empty {
+            background: red;
+        }
+
+        .empty:not(.not) {
+            background: yellow;
+        }
+
+        /*--------------------------------------------------------------------------Селектор атрибутов*/
+
+        a {
+            font-size: 25px;
+        }
+
+        a[class] {
+            font-size: 50px;
+        }
+
+        a[class="list-style"] {
+            background: lightsalmon;
+        }
+
 
         /*--------------------------------------------------------------------------Псевдоэлементы ::before, ::after*/
         .two {
