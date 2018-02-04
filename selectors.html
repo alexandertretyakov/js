@@ -94,13 +94,13 @@
             box-sizing: border-box;
         }
 
-        html,
+        html,                           /*div - элемент с таким тегом*/
         body {
             height: 100%;
             background-color: #1234;
         }
 
-        #page {                         /*div - элемент с таким тегом*/ /*#id – элемент с данным id*/
+        #page {                         /*#id – элемент с данным id*/
             padding: 0 auto;
         }
 
@@ -113,7 +113,7 @@
             margin-left: 50px;
         }
 
-        .с1 {                         /*.c1.c2 – элементы одновременно с двумя классами c1 и c2*/
+        .с1 {
             width: 140px;
             height: 140px;
         }
@@ -128,13 +128,13 @@
         }
 
         .link:hover {
-            background: #987;/*:visited – «псевдоклассы»*/
+            background: #987;           /*:visited – «псевдоклассы»*/
             color: aliceblue;
         }
 
         /*--------------------------------------------------------------------------Комбинирование*/
 
-        div.empty.not {
+        div.empty.not {                 /*.c1.c2 – элементы одновременно с двумя классами c1 и c2*/
             border: 5px solid blue;
         }
 
@@ -237,6 +237,7 @@
             background: lightsalmon;
         }
 
+        /* TODO: их больше */
 
         /*--------------------------------------------------------------------------Псевдоэлементы ::before, ::after*/
         .two {
@@ -244,7 +245,7 @@
         }
 
         .two p::before {         /*::before - добавляет контент перед р*/
-            content: " '' ";
+            content: " '-yo-' ";
         }
 
         .two p::after {         /*::after - добавляет контент после р*/
