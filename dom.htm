@@ -394,22 +394,30 @@
 
     // Задание 14
     document.querySelector('.b14').addEventListener('click', function() {
+        // first option
+        var whoreCanCome;
+        if (whore.can_come) {
+            whoreCanCome = '+';
+        } else {
+            whoreCanCome = '-';
+        }
         var newGirl =
-        '<div class="whore">' +
-            '<div class="whore-name">' + whore.name + '</div>' +
-            '<img src="' + whore.photo + '"width="200">' +
-            '<div class="whore-age">Возраст:' + whore.age + '</div>' +
-            '<div class="whore-boobs">Размер груди:' + whore.boobs + '</div>' +
-            '<div class="whore-weight">Рост:' + whore.weight + '</div>' +
-            '<div class="whore-height">Вес:' + whore.height + '</div>' +
-            '<div class="whore-phone">' + whore.phone + '</div>' +
-            '<div class="whore-can-come">Выезд: -</div>' +
-            '<div class="whore-teaser">' + whore.teaser + '</div>' +
-        '</div>';
+            '<div class="whore">' +
+                '<div class="whore-name">' + whore.name + '</div>' +
+                '<img src="' + whore.photo + ' "width="200">' +
+                '<div class="whore-age">Возраст:' + whore.age + '</div>' +
+                '<div class="whore-boobs">Размер груди:' + whore.boobs + '</div>' +
+                '<div class="whore-weight">Рост:' + whore.weight + '</div>' +
+                '<div class="whore-height">Вес:' + whore.height + '</div>' +
+                '<div class="whore-phone">' + whore.phone + '</div>' +
+                '<div class="whore-can-come">Выезд: ' + whoreCanCome + '</div>' +
+                '<div class="whore-teaser">' + whore.teaser + '</div>' +
+            '</div>';
 
         document.querySelector('.whores-container').innerHTML += newGirl;
 
-        /*var newGirl = document.createElement('div');
+        // second option
+        newGirl = document.createElement('div');
         newGirl.classList.add('whore');
 
         var whoreName = document.createElement('div');
@@ -456,7 +464,7 @@
         whoreTeaser.innerText = whore.teaser;
         newGirl.appendChild(whoreTeaser);
 
-        document.querySelector('.whores-container').appendChild(newGirl);*/
+        document.querySelector('.whores-container').appendChild(newGirl);
     });
 
     // Задание 15

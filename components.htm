@@ -285,13 +285,43 @@
     });
 
     // Задание 2
-    document.querySelector('.question').addEventListener('click', function(event) {
-        var el = event.target.parentNode;
-        if (el.tagName === 'DT') {
-            el.classList.toggle('active');
+    // First option
+//    document.querySelector('.faq').addEventListener('click', function(event) {
+//        if (event.target.tagName === 'DT') {
+//            event.target.classList.toggle('active');
+//        }
+//    });
+
+    // Second option
+    var faqQuestions = document.querySelectorAll('.question');
+    var i = 0;
+    while (i < faqQuestions.length) {
+        faqQuestions[i].addEventListener('click', function(event) {
+            this.classList.toggle('active');
+            //event.target.classList.toggle('active');
+        });
+        i++;
+    }
+
+    // Задание 3
+    var removeActiveClass = function() {
+        var $elements = document.querySelectorAll('.x-tabs .x-tab, .x-items .x-item');
+
+        var i = 0;
+        while (i < $elements.length) {
+            $elements[i].classList.remove('active');
+            i++;
+        }
+    };
+
+    document.querySelector('.x-tabs').addEventListener('click', function (event) {
+        if (event.target.classList.contains('x-tab')) {
+            removeActiveClass();
+            event.target.classList.add('active');
+            var tabName = event.target.dataset.tab;
+            document.querySelector('.x-item[data-section="' + tabName + '"]').classList.add('active');
         }
     });
-
 
     // Задание 4
     document.querySelector('.show-login-pop-up').addEventListener('click', function() {
@@ -302,24 +332,5 @@
     document.querySelector('.close').addEventListener('click', function() {
         document.querySelector('.overlay').classList.add('hidden');
         document.querySelector('.pop-up').classList.add('hidden');
-    });
-
-    // Задание 3
-    var tabs = function() {
-        var $tab = document.querySelectorAll('.x-tabs x-tab');
-
-        var i = 0;
-        while (i < $tab.length) {
-            $tab[i].classList.remove('active');
-            i++;
-        }
-    };
-
-    document.querySelector('.x-tabs').addEventListener('click', function (event) {
-        if (event.target.tagName === 'DIV') {
-            tabs();
-            event.target.classList.add('active');
-            document.querySelectorAll('.x-tab').classList.add('active');
-        }
     });
 </script>
