@@ -349,57 +349,106 @@
         $('.t1').css('color', 'red');
     });
 
-    document.querySelector('.b2').addEventListener('click', function() {
-        document.querySelector('.t2').style.backgroundColor = 'green';
+ //   document.querySelector('.b2').addEventListener('click', function() {
+ //       document.querySelector('.t2').style.backgroundColor = 'green';
+ //   });
+
+    $('.b2').on('click', function() {
+        $('.t2').css('backgroundColor', 'green');
     });
 
-    document.querySelector('.b3').addEventListener('click', function() {
-        document.querySelectorAll('.t3 a')[0].href = 'http://zoo.kiev.ua/';
+//    document.querySelector('.b3').addEventListener('click', function() {
+//        document.querySelectorAll('.t3 a')[0].href = 'http://zoo.kiev.ua/';
+//    });
+    $('.b3').on('click', function() {
+        $('.t3 a').attr("href", "http://zoo.kiev.ua/");
     });
 
-    document.querySelector('.b4').addEventListener('click', function() {
-        document.querySelectorAll('.t4 img')[0].src = 'https://i.pinimg.com/236x/df/f3/a3/dff3a3eef3fca5051c4d5cb96d276dec--ted-yahoo.jpg';
+//    document.querySelector('.b4').addEventListener('click', function() {
+//        document.querySelectorAll('.t4 img')[0].src = 'https://i.pinimg.com/236x/df/f3/a3/dff3a3eef3fca5051c4d5cb96d276dec--ted-yahoo.jpg';
+//    });
+
+    $('.b4').on('click', function() {
+        $('.t4 IMG').attr("src", "https://i.pinimg.com/236x/df/f3/a3/dff3a3eef3fca5051c4d5cb96d276dec--ted-yahoo.jpg");
     });
 
-    document.querySelector('.b5').addEventListener('click', function() {
-        document.querySelectorAll('.t5')[0].id = 'cd';
+//    document.querySelector('.b5').addEventListener('click', function() {
+//        document.querySelectorAll('.t5')[0].id = 'cd';
+//    });
+
+    $('.b5').on('click', function() {
+        $('.t5').attr("id", "cd");
     });
 
-    document.querySelector('.b6').addEventListener('click', function() {
-        document.querySelectorAll('.t6')[0].innerText = 'Тест пройден !!!';
+//    document.querySelector('.b6').addEventListener('click', function() {
+//        document.querySelectorAll('.t6')[0].innerText = 'Тест пройден !!!';
+//    });
+
+    $('.b6').on('click', function() {
+        $('.t6').text("Тест пройден !!!");
     });
 
-    document.querySelector('.b7').addEventListener('click', function() {
-        document.querySelectorAll('.t7')[0].innerHTML += '<b>Test Flowers</b>';
+//    document.querySelector('.b7').addEventListener('click', function() {
+//        document.querySelectorAll('.t7')[0].innerHTML += '<b>Test Flowers</b>';
+//    });
+
+    $('.b7').on('click', function() {
+        $('.t7').html($('.t7').html() + '<b>Test Flowers</b>');
     });
 
-    document.querySelector('.b8').addEventListener('click', function() {
-        document.querySelectorAll('.t8')[0].style.fontSize = '20px';
+//   document.querySelector('.b8').addEventListener('click', function() {
+//       document.querySelector('.t8').style.fontSize = '25px';
+//   });
+
+    $('.b8').on('click', function() {
+        $('.t8').css('fontSize', '25px');
     });
 
-    document.querySelector('.b9').addEventListener('click', function() {
-        document.querySelectorAll('.t9')[0].classList.add('hi');
+//    document.querySelector('.b9').addEventListener('click', function() {
+//        document.querySelectorAll('.t9')[0].classList.add('hi');
+//    });
+
+    $('.b9').on('click', function() {
+        $('.t9').addClass("hi");
     });
 
-    document.querySelector('.b10').addEventListener('click', function() {
-        document.querySelectorAll('.t10')[0].classList.remove('hi');
+//    document.querySelector('.b10').addEventListener('click', function() {
+//        document.querySelectorAll('.t10')[0].classList.remove('hi');
+//    });
+
+    $('.b10').on('click', function() {
+        $('.t10').removeClass("hi");
     });
 
-    document.querySelector('.b11').addEventListener('click', function() {
-        document.querySelectorAll('.t11')[0].classList.toggle('hi');
+//    document.querySelector('.b11').addEventListener('click', function() {
+//        document.querySelectorAll('.t11')[0].classList.toggle('hi');
+//    });
+
+    $('.b11').on('click', function() {
+        $('.t11').toggleClass("hi");
     });
 
-    document.querySelectorAll('body')[0].addEventListener('click', function(event) {
-        document.querySelectorAll('.t12')[0].innerText = event.target.className;
+//    document.querySelectorAll('body')[0].addEventListener('click', function(event) {
+//        document.querySelectorAll('.t12')[0].innerText = event.target.className;
+//    });
+
+    $('body').on('click', function(event) {
+        $('.t12').text(event.target.className);
     });
 
-    document.querySelector('.b13').addEventListener('click', function() {
+//    document.querySelector('.b13').addEventListener('click', function() {
+//        var translation = document.querySelector('.t13').dataset.en;
+//        document.querySelector('.t13').innerText = translation;
+//    });
+
+    $('.b13').on('click', function() {
         var translation = document.querySelector('.t13').dataset.en;
-        document.querySelector('.t13').innerText = translation;
+        $('.t13').text(translation);
     });
 
     // Задание 14
-    document.querySelector('.b14').addEventListener('click', function() {
+//    document.querySelector('.b14').addEventListener('click', function() {
+    $('.b14').on('click', function() {
         // first option
         var whoreCanCome;
         if (whore.can_come) {
@@ -420,42 +469,57 @@
                 '<div class="whore-teaser">' + whore.teaser + '</div>' +
             '</div>';
 
-        document.querySelector('.whores-container').innerHTML += newGirl;
+//        document.querySelector('.whores-container').innerHTML += newGirl;
+        $('.whores-container').html( $('.whores-container').html() + newGirl);
 
         // second option
-        newGirl = document.createElement('div');
-        newGirl.classList.add('whore');
+//        newGirl = document.createElement('div');
+//        newGirl.classList.add('whore');
+        newGirl = $('div');
+        newGirl.addClass("whore");
 
-        var whoreName = document.createElement('div');
-        whoreName.classList.add('whore-name');
-        whoreName.innerText = whore.name;
-        newGirl.appendChild(whoreName);
+//        var whoreName = document.createElement('div');
+//        whoreName.classList.add('whore-name');
+//        whoreName.innerText = whore.name;
+//        newGirl.appendChild(whoreName);
+
+        var whoreName = $('div');
+        whoreName.addClass("whore-name");
+        whoreName.text(whore.name);
+        newGirl.append(whoreName);
 
         var whorePhoto = document.createElement('img');
         whorePhoto.src = whore.photo;
         whorePhoto.style.width = '200px';
-        newGirl.appendChild(whorePhoto);
+//        newGirl.appendChild(whorePhoto);
+        newGirl.append(whorePhoto);
 
         var whoreAge = document.createElement('div');
         whoreAge.innerText = 'Возраст: ' + whore.age;
-        newGirl.appendChild(whoreAge);
+//        newGirl.appendChild(whoreAge);
+        newGirl.append(whoreAge);
 
         var whoreBoobs = document.createElement('div');
         whoreBoobs.innerText = 'Размер груди:  ' + whore.boobs;
-        newGirl.appendChild(whoreBoobs);
+//        newGirl.appendChild(whoreBoobs);
+        newGirl.append(whoreBoobs);
 
         var whoreWeight = document.createElement('div');
         whoreWeight.innerText = 'Рост: ' + whore.weight;
-        newGirl.appendChild(whoreWeight);
+//        newGirl.appendChild(whoreWeight);
+        newGirl.append(whoreWeight);
 
         var whoreHeight = document.createElement('div');
         whoreHeight.innerText = 'Рост: ' + whore.height;
-        newGirl.appendChild(whoreHeight);
+//        newGirl.appendChild(whoreHeight);
+        newGirl.append(whoreHeight);
 
         var whorePhone = document.createElement('div');
         whorePhone.classList.add('whore-phone');
         whorePhone.innerText = whore.phone;
-        newGirl.appendChild(whorePhone);
+//        newGirl.appendChild(whorePhone);
+        newGirl.append(whorePhone);
+
 
         var whoreCanCome = document.createElement('div');
         if (whore.can_come) {
@@ -463,18 +527,21 @@
         } else {
             whoreCanCome.innerText = 'Выезд: -';
         }
-        newGirl.appendChild(whoreCanCome);
+//        newGirl.appendChild(whoreCanCome);
+        newGirl.append(whoreCanCome);
 
         var whoreTeaser = document.createElement('div');
         whoreTeaser.classList.add('whore-teaser');
         whoreTeaser.innerText = whore.teaser;
-        newGirl.appendChild(whoreTeaser);
+//        newGirl.appendChild(whoreTeaser);
+        newGirl.append(whoreTeaser);
 
-        document.querySelector('.whores-container').appendChild(newGirl);
+//        document.querySelector('.whores-container').appendChild(newGirl);
+        $('.whores-container').append(newGirl);
     });
 
     // Задание 15
-    document.querySelector('.b15').addEventListener('click', function() {
+/*    document.querySelector('.b15').addEventListener('click', function() {
         var fish = document.querySelector('.fish');
 
         if(document.querySelector('.cat-container-1 .fish')){
@@ -483,10 +550,23 @@
             document.querySelector('.cat-container-1').appendChild(fish)
         }
     });
+ */
+    $('.b15').on('click', function() {
+        var fish = $('.fish');
+
+        if($('.cat-container-1 .fish').length === 1) {
+            $('.cat-container-2').append(fish)
+        } else {
+            $('.cat-container-1').append(fish)
+        }
+    });
 
     // Задание 16
-    document.querySelector('.b16').addEventListener('click', function() {
-        document.querySelector('.tooth-container').removeChild(document.querySelector('.tooth'));
+//    document.querySelector('.b16').addEventListener('click', function() {
+//        document.querySelector('.tooth-container').removeChild(document.querySelector('.tooth'));
+//    });
+    $('.b16').on('click', function() {
+        $('.tooth-container').remove($('.tooth'));
     });
 
     // Задание 17
