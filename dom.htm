@@ -456,6 +456,7 @@
         } else {
             whoreCanCome = '-';
         }
+
         var newGirl =
             '<div class="whore">' +
                 '<div class="whore-name">' + whore.name + '</div>' +
@@ -470,12 +471,12 @@
             '</div>';
 
 //        document.querySelector('.whores-container').innerHTML += newGirl;
-        $('.whores-container').html( $('.whores-container').html() + newGirl);
+//        $('.whores-container').html( $('.whores-container').html() + newGirl);
 
         // second option
 //        newGirl = document.createElement('div');
 //        newGirl.classList.add('whore');
-        newGirl = $('div');
+        newGirl = $('<div>');
         newGirl.addClass("whore");
 
 //        var whoreName = document.createElement('div');
@@ -483,57 +484,80 @@
 //        whoreName.innerText = whore.name;
 //        newGirl.appendChild(whoreName);
 
-        var whoreName = $('div');
+        var whoreName = $('<div>');
         whoreName.addClass("whore-name");
         whoreName.text(whore.name);
         newGirl.append(whoreName);
 
-        var whorePhoto = document.createElement('img');
-        whorePhoto.src = whore.photo;
-        whorePhoto.style.width = '200px';
+//        var whorePhoto = document.createElement('img');
+//        whorePhoto.src = whore.photo;
+//        whorePhoto.style.width = '200px';
 //        newGirl.appendChild(whorePhoto);
+        var whorePhoto = $('<img>');
+        whorePhoto.attr('src', whore.photo);
+        whorePhoto.css('width', '200px');
         newGirl.append(whorePhoto);
 
-        var whoreAge = document.createElement('div');
-        whoreAge.innerText = 'Возраст: ' + whore.age;
+//        var whoreAge = document.createElement('div');
+//        whoreAge.innerText = 'Возраст: ' + whore.age;
 //        newGirl.appendChild(whoreAge);
+        var whoreAge = $('<div>');
+        whoreAge.text('Возраст: ' + whore.age);
         newGirl.append(whoreAge);
 
-        var whoreBoobs = document.createElement('div');
-        whoreBoobs.innerText = 'Размер груди:  ' + whore.boobs;
+//        var whoreBoobs = document.createElement('div');
+//        whoreBoobs.innerText = 'Размер груди:  ' + whore.boobs;
 //        newGirl.appendChild(whoreBoobs);
+        var whoreBoobs = $('<div>');
+        whoreBoobs.text('Размер груди: ' + whore.age);
         newGirl.append(whoreBoobs);
 
-        var whoreWeight = document.createElement('div');
-        whoreWeight.innerText = 'Рост: ' + whore.weight;
+//        var whoreWeight = document.createElement('div');
+//        whoreWeight.innerText = 'Рост: ' + whore.weight;
 //        newGirl.appendChild(whoreWeight);
+        var whoreWeight = $("<div>");
+        whoreWeight.text('Рост: ' + whore.weight);
         newGirl.append(whoreWeight);
 
-        var whoreHeight = document.createElement('div');
-        whoreHeight.innerText = 'Рост: ' + whore.height;
+//        var whoreHeight = document.createElement('div');
+//        whoreHeight.innerText = 'Рост: ' + whore.height;
 //        newGirl.appendChild(whoreHeight);
+        var whoreHeight = $('<div>');
+        whoreHeight.text('Рост: ' + whore.height);
         newGirl.append(whoreHeight);
 
-        var whorePhone = document.createElement('div');
-        whorePhone.classList.add('whore-phone');
-        whorePhone.innerText = whore.phone;
+//        var whorePhone = document.createElement('div');
+//        whorePhone.classList.add('whore-phone');
+//        whorePhone.innerText = whore.phone;
 //        newGirl.appendChild(whorePhone);
+        var whorePhone = $('<div>');
+        whorePhone.addClass('whore-phone');
+        whorePhone.text(whore.phone);
         newGirl.append(whorePhone);
 
 
-        var whoreCanCome = document.createElement('div');
-        if (whore.can_come) {
-            whoreCanCome.innerText = 'Выезд: +';
-        } else {
-            whoreCanCome.innerText = 'Выезд: -';
-        }
+//        var whoreCanCome = document.createElement('div');
+//        if (whore.can_come) {
+//            whoreCanCome.innerText = 'Выезд: +';
+//        } else {
+//            whoreCanCome.innerText = 'Выезд: -';
+//        }
 //        newGirl.appendChild(whoreCanCome);
+        var whoreCanCome = $('<div>');
+          if (whore.can_come) {
+              whoreCanCome.text('Выезд: +');
+        } else {
+              whoreCanCome.text('Выезд: -');
+        }
         newGirl.append(whoreCanCome);
 
-        var whoreTeaser = document.createElement('div');
-        whoreTeaser.classList.add('whore-teaser');
-        whoreTeaser.innerText = whore.teaser;
+//        var whoreTeaser = document.createElement('div');
+//        whoreTeaser.classList.add('whore-teaser');
+//        whoreTeaser.innerText = whore.teaser;
 //        newGirl.appendChild(whoreTeaser);
+        var whoreTeaser = $('<div>');
+        whoreTeaser.addClass('whore-teaser');
+        whoreTeaser.text(whore.teaser);
         newGirl.append(whoreTeaser);
 
 //        document.querySelector('.whores-container').appendChild(newGirl);
@@ -566,7 +590,7 @@
 //        document.querySelector('.tooth-container').removeChild(document.querySelector('.tooth'));
 //    });
     $('.b16').on('click', function() {
-        $('.tooth-container').remove($('.tooth'));
+        $('.tooth').remove();
     });
 
     // Задание 17
@@ -614,8 +638,52 @@
         }
     });
 
+/*    $('.b17').on('click', function() {
+        var i = 0;
+        while (i < map.length) {
+            var j = 0;
+            while (j < map[i].length) {
+                var el = $('<div>');
+                el.addClass('tile');
+
+                if (map[i][j] === 'w') {
+                    el.addClass('x_w');
+                }
+                if (map[i][j] === 'c') {
+                    el.addClass('x_c');
+                }
+                if (map[i][j] === 'k') {
+                    el.addClass('x_k');
+                }
+                if (map[i][j] === 'b') {
+                    el.addClass('x_b');
+                }
+                if (map[i][j] === 't') {
+                    el.addClass('x_t');
+                }
+                if (map[i][j] === 'd') {
+                    el.addClass('x_d');
+                }
+                if (map[i][j] === 'g') {
+                    el.addClass('x_g');
+                }
+                if (map[i][j] === 'z') {
+                    el.addClass('x_z');
+                }
+
+                el.css('top', 'i * 16');
+                el.css('left', 'j * 16');
+
+                $('.scene').append(el);
+
+                j = j + 1;
+            }
+            i = i + 1;
+        }
+   });
+*/
     // Задание 18
-    var timer;
+        var timer;
 
     document.querySelector('.b18').addEventListener('click', function() {
         var x = 0;
@@ -631,6 +699,22 @@
         clearInterval(timer);
     });
 
+/*    var timer;
+
+    $('.b18').on('click', function() {
+        var x = 0;
+        var el = $('.skier');
+
+        timer = setInterval(function() {
+            x += 5;
+            el.css('left', 'x');
+        }, 16);
+    });
+
+    $('.b18-2').on('click', function() {
+        clearInterval(timer);
+    });
+*/
     // Задание 19
     var mikki = [
         '  XXXX        XXXX  ',
