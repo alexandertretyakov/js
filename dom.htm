@@ -671,8 +671,8 @@
                     el.addClass('x_z');
                 }
 
-                el.css('top', 'i * 16');
-                el.css('left', 'j * 16');
+                el.css('top', i * 16);
+                el.css('left', j * 16);
 
                 $('.scene').append(el);
 
@@ -707,7 +707,7 @@
 
         timer = setInterval(function() {
             x += 5;
-            el.css('left', 'x');
+            el.css('left', x);
         }, 16);
     });
 
